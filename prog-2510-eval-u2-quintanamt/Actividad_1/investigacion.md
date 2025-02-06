@@ -17,9 +17,10 @@
 
 En resumen: Un computador es una máquina electrónica programable que procesa datos y ejecuta tareas mediante hardware y software. La definicion oficial del NIST coinciden en describirlo como un dispositivo capaz de almacenar, recuperar y procesar información de manera automática.
 
+![alt text](<../Images/Captura de pantalla 2025-02-04 a la(s) 2.58.26 p.m..png>)
 `referencia bibliográfica`: *National Institute of Standards and Technology (NIST). (s.f.). Computer. En Computer Security Resource Center (CSRC). Recuperado de https://csrc.nist.gov/glossary/term/computer*
 
-![alt text](<../Captura de pantalla 2025-02-04 a la(s) 2.58.26 p.m..png>)
+
 
 
 **2. Arquitecturas de un computador: dar una breve definición de qué es una arquitectura de computador. Describir cómo están construidas y en qué equipos modernos se pueden encontrar.**
