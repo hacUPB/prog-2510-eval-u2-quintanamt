@@ -17,7 +17,8 @@
 
 En resumen: Un computador es una máquina electrónica programable que procesa datos y ejecuta tareas mediante hardware y software. La definicion oficial del NIST coinciden en describirlo como un dispositivo capaz de almacenar, recuperar y procesar información de manera automática.
 
-![alt text](<../Images/Captura de pantalla 2025-02-04 a la(s) 2.58.26 p.m..png>)
+![images](<../Images/Captura de pantalla 2025-02-04 a la(s) 2.58.26 p.m..png>)
+
 `referencia bibliográfica`: *National Institute of Standards and Technology (NIST). (s.f.). Computer. En Computer Security Resource Center (CSRC). Recuperado de https://csrc.nist.gov/glossary/term/computer*
 
 
@@ -105,7 +106,9 @@ B. **GPU. Define qué es y como funciona. Además, presenta una comparación con
 
 -La GPU tiene miles de núcleos pequeños para procesar muchas operaciones a la vez, mientras que la CPU tiene menos núcleos pero más potentes para tareas complejas (AMD, 2023). 
 
-![alt text](<../Captura de pantalla 2025-02-05 a la(s) 9.04.35 p.m..png>)
+![alt text](<../Images/Captura de pantalla 2025-02-05 a la(s) 9.04.35 p.m..png>)
+
+
 
 `referencia bibliográfica`: 
 
@@ -142,8 +145,9 @@ Son la memoria más rápida y pequeña, ubicada directamente dentro de la CPU.
 
 **-Función:** Proporciona un espacio de trabajo rápido para el sistema operativo y las aplicaciones.
 
+![alt text](<../Images/Captura de pantalla 2025-02-05 a la(s) 9.13.32 p.m..png>)
 
-![alt text](<../Captura de pantalla 2025-02-05 a la(s) 9.13.32 p.m..png>)
+
 
 `Memoria Secundaria (Disco duro y unidades externas):`Almacenamiento no volátil para guardar datos a largo plazo.
 
@@ -154,12 +158,14 @@ Son la memoria más rápida y pequeña, ubicada directamente dentro de la CPU.
 
 `Dispositivos de Entrada (E):`Permiten ingresar datos o instrucciones a la computadora.
 
+![alt text](<../Images/Captura de pantalla 2025-02-05 a la(s) 9.21.55 p.m..png>)
 
-![text](<../Captura de pantalla 2025-02-05 a la(s) 9.21.55 p.m..png>)
  
 `Dispositivos de Salida (S):`Muestran o emiten los resultados procesados por la computadora.
 
-![alt text](<../Captura de pantalla 2025-02-05 a la(s) 9.23.53 p.m..png>)
+![alt text](<../Images/Captura de pantalla 2025-02-05 a la(s) 9.23.53 p.m..png>)
+
+
 
 `Dispositivos de Entrada/Salida (Mixtos):` Permiten tanto la entrada como la salida de datos.
 
@@ -248,8 +254,7 @@ Ejemplo: Visual Studio
 
     - Terabyte (TB): 1,024 GB.
 
-![
-](<../Captura de pantalla 2025-02-05 a la(s) 9.48.12 p.m..png>)
+![alt text](<../Images/Captura de pantalla 2025-02-05 a la(s) 9.48.12 p.m..png>)
 
 `referencia bibliográfica`: 
 
