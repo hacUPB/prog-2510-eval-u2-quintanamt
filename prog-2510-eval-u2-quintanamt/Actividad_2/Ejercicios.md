@@ -8,6 +8,8 @@
 
         En la Figura 2 se plantea la pregunta: ¿Cuántos estados diferentes se pueden representar usando N bits? Tras analizar el ejercicio, se concluye que el número de estados diferentes que se pueden representar con N bits sigue una progresión exponencial dada por la formula 2^N. Esto se debe a que cada bit añade una nueva dimensión binaria (0 o 1), duplicando las combinaciones posibles. Por lo tanto, la representación matemática para calcular el número de estados es 2^N, donde N es el número de bits. 
 
+*Referencias Bibliograficas: Tanenbaum, A. S. (2013). Structured Computer Organization. Pearson Education. (Capítulo 3: Sistemas numéricos y aritmética binaria).* 
+
 3. ¿Cuáles son las unidades de almacenamiento de datos que se utilizan en computación? Crea una tabla donde muestres estas unidades con sus prefijos. En este caso me refiero a KiloByte, MegaByte, etc. 
 
 
@@ -27,10 +29,13 @@
 | Zettabyte | ZB      | 1,024 exabytes             |
 | Yottabyte | YB      | 1,024 zettabytes           |
 
+*Referencias Bibliograficas: Patterson, D. A., & Hennessy, J. L. (2017). Computer Organization and Design: The Hardware/Software Interface. Morgan Kaufmann. (Apéndice A: Unidades de almacenamiento).*
+
 4. Incluye un pequeño resumen, de un par de renglones, donde menciones la importancia del trabajo de George Bool en este tópico.
 
         George Boole sentó las bases de la lógica booleana, un sistema algebraico que utiliza valores binarios (verdadero/falso o 1/0) para representar y manipular proposiciones lógicas. Su trabajo es fundamental en la computación moderna, ya que permite el diseño de circuitos electrónicos, la programación de software y la toma de decisiones en sistemas digitales. Sin la lógica booleana, no sería posible el funcionamiento de las computadoras tal como las conocemos hoy.
 
+*Referencias Bibliograficas: Boole, G. (1854). An Investigation of the Laws of Thought. Macmillan. (Obra original que introduce la lógica booleana).*
 
 # Conversion Entre binarios y decimales 
 
@@ -169,6 +174,12 @@ es_valido = True
 
 
 ```
+
+*Referencias Bibliograficas: Kernighan, B. W., & Ritchie, D. M. (1988). The C Programming Language. Prentice Hall. (Capítulo 2: Tipos de datos).*
+
+*Horstmann, C. S. (2019). Core Java: Fundamentals. Pearson Education. (Capítulo 3: Tipos de datos en Java).*
+
+*Lutz, M. (2013). Learning Python. O'Reilly Media. (Capítulo 4: Tipos de datos en Python).*
 
 ## **5. Ejercicio de cálculo de espacio en memoria**
 
