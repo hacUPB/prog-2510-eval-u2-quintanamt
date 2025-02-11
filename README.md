@@ -1,30 +1,6 @@
-**Unidad No. 2**
+# Unidad No. 2
 
+# *Actividad_1: El computador digital moderno*
 
-Información del estudiante: 
+# *Actividad_2: Representación de datos digitales*
 
-Nombre del estudiante: Manuela Quintana Torres
-
-
-Id.:000493180
-
-├── Investigaciones/    
-
-├── Actividades/        
-
-│   ├── Actividad_1/ 
-
-        -Investigacion.md
-
-        -Mapa Conceptual.md
-
-
-
-│   ├── Actividad_2/         
-
-│   └── ...                   
-├── Retos/                     
-│   ├── Reto_1/               
-│   ├── Reto_2/               
-│   └── ...                   
-└── README.md                 
