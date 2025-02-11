@@ -79,42 +79,6 @@ Analicemos el siguiente problema y representemos su solución mediante un algori
 
 - Construye un algoritmo que, al recibir como datos **el ID** del empleado y los seis primeros sueldos del año, calcule el ingreso total semestral y el promedio mensual, e imprima el ID del empleado, el ingreso total y el promedio mensual.
 
-### Algoritmo Calcular Ingresos Empleado ###
+### Diagrama de Flujo 
 
-    // Declaración de variables
-    Definir ID_Empleado Como Cadena
-    Definir Sueldo1, Sueldo2, Sueldo3, Sueldo4, Sueldo5, Sueldo6 Como Real
-    Definir IngresoTotal, PromedioMensual Como Real
-
-    // Entrada de datos
-    Escribir "Ingrese el ID del empleado:"
-    Leer ID_Empleado
-
-    Escribir "Ingrese el sueldo del mes 1:"
-    Leer Sueldo1
-
-    Escribir "Ingrese el sueldo del mes 2:"
-    Leer Sueldo2
-
-    Escribir "Ingrese el sueldo del mes 3:"
-    Leer Sueldo3
-
-    Escribir "Ingrese el sueldo del mes 4:"
-    Leer Sueldo4
-
-    Escribir "Ingrese el sueldo del mes 5:"
-    Leer Sueldo5
-
-    Escribir "Ingrese el sueldo del mes 6:"
-    Leer Sueldo6
-
-    // Procesamiento de datos
-    IngresoTotal = Sueldo1 + Sueldo2 + Sueldo3 + Sueldo4 + Sueldo5 + Sueldo6
-    PromedioMensual = IngresoTotal / 6
-
-    // Salida de resultados
-    Escribir "ID del empleado: ", ID_Empleado
-    Escribir "Ingreso total semestral: ", IngresoTotal
-    Escribir "Promedio mensual: ", PromedioMensual
-
-FinAlgoritmo
+![alt text](<../Images/Captura de pantalla 2025-02-11 a la(s) 3.34.12 p.m..png>)
