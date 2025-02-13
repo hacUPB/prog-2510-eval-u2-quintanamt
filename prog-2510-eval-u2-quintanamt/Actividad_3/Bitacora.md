@@ -70,7 +70,7 @@ Investiga cuáles son los símbolos que se utilizan para representar cada operac
 *Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to Algorithms (3rd ed.). MIT Press.*
 
 
-![alt text](<../Captura de pantalla 2025-02-11 a la(s) 3.09.58 p.m..png>)
+
 
 *Imagen obtenida de "Problemario de algoritmos resueltos con diagramas de flujo y pseudocodigo*
 
