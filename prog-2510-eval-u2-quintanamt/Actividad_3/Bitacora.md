@@ -112,9 +112,6 @@ Analicemos el siguiente problema y representemos su solución mediante un algori
 
 FIN
 
-#### DIAGRAMA DE FLUJO
-
-![alt text](<../Images/Diagrama sin título.drawio.png>)
 
 2. Un almacén de ropa tiene una promoción: por compras superiores a $250 000 se les aplicará un descuento de 15%, de caso contrario, sólo se aplicará un 8% de descuento. Realice un algoritmo para determinar el precio final que debe pagar una persona por comprar en dicho almacén y de cuánto es el descuento que obtendrá. Represéntelo mediante el pseudocódigo y el diagrama de flujo.
 
@@ -190,31 +187,31 @@ FIN
 
 ## Ejercicio Convertido en formato para Python
 
-# Declaración de variables
-num_alumnos = 0
-costo_por_alumno = 0.0
-costo_total = 0.0
+    # Declaración de variables
+    num_alumnos = 0
+    costo_por_alumno = 0.0
+    costo_total = 0.0
 
-# Solicitar el número de alumnos al usuario
-num_alumnos = int(input("Ingrese el número de alumnos: "))
+    # Solicitar el número de alumnos al usuario
+    num_alumnos = int(input("Ingrese el número de alumnos: "))
 
-# Determinar el costo por alumno y el costo total
-if num_alumnos >= 100:
-    costo_por_alumno = 65.00
-    costo_total = num_alumnos * costo_por_alumno
-elif num_alumnos >= 50:
-    costo_por_alumno = 70.00
-    costo_total = num_alumnos * costo_por_alumno
-elif num_alumnos >= 30:
-    costo_por_alumno = 95.00
-    costo_total = num_alumnos * costo_por_alumno
-else:
-    costo_por_alumno = 4000.00 / num_alumnos  # Costo fijo del autobús dividido entre los alumnos
-    costo_total = 4000.00
+    # Determinar el costo por alumno y el costo total
+    if num_alumnos >= 100:
+        costo_por_alumno = 65.00
+        costo_total = num_alumnos * costo_por_alumno
+    elif num_alumnos >= 50:
+        costo_por_alumno = 70.00
+        costo_total = num_alumnos * costo_por_alumno
+    elif num_alumnos >= 30:
+        costo_por_alumno = 95.00
+        costo_total = num_alumnos * costo_por_alumno
+    else:
+        costo_por_alumno = 4000.00 / num_alumnos  # Costo fijo del autobús dividido entre los alumnos
+        costo_total = 4000.00
 
-# Mostrar resultados
-print(f"El costo por alumno es: ${costo_por_alumno:.2f}")
-print(f"El costo total a pagar a la compañía de viajes es: ${costo_total:.2f}")
+    # Mostrar resultados
+    print(f"El costo por alumno es: ${costo_por_alumno:.2f}")
+    print(f"El costo total a pagar a la compañía de viajes es: ${costo_total:.2f}")
 
 # Consigna tus respuestas en la bitácora
 
