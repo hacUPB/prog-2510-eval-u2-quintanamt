@@ -82,3 +82,36 @@ Analicemos el siguiente problema y representemos su solución mediante un algori
 ### Diagrama de Flujo 
 
 ![alt text](<../Images/Captura de pantalla 2025-02-11 a la(s) 3.34.12 p.m..png>)
+
+
+## EJERCICIOS 
+
+1. Realice un algoritmo para determinar cuánto se debe pagar por equis cantidad de lápices considerando que si son 1000 o más el costo es de $85 cada uno; de lo contrario, el precio es de $90. Represéntelo con el pseudocódigo y el diagrama de flujo.
+
+### Pseudocodigo
+
+    INICIO
+
+    // Declaración de variables
+    ENTERO cantidad_lapices
+    REAL costo_total
+
+    // Solicitar la cantidad de lápices al usuario
+    ESCRIBIR "Ingrese la cantidad de lápices:"
+    LEER cantidad_lapices
+
+    // Determinar el costo por lápiz
+    SI cantidad_lapices >= 1000 ENTONCES
+        costo_total = cantidad_lapices * 85
+    SINO
+        costo_total = cantidad_lapices * 90
+    FIN SI
+
+    // Mostrar el costo total
+    ESCRIBIR "El costo total es: $", costo_total
+
+FIN
+
+#### DIAGRAMA DE VEEN 
+
+![alt text](<../Images/Diagrama sin título.drawio.png>)
