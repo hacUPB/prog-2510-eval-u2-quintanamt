@@ -1,22 +1,31 @@
 ### Ejercicio Extra de Bucles 
 
 1. Solicitar al usuario 2 números enteros, imprimir en pantalla los numeros pares comprendidos entre ellos. 
-    
-#### Solicitar al usuario dos números enteros
-num1 = int(input("Introduce el primer número entero: "))
-num2 = int(input("Introduce el segundo número entero: "))
+            
+        Inicio
 
-# Determinar el menor y el mayor número
-inicio = min(num1, num2)
-fin = max(num1, num2)
+        Escribir "Introduce el primer número entero:"
+        Leer num1
+        Escribir "Introduce el segundo número entero:"
+        Leer num2
+        
+        Si num1 < num2 Entonces
+            inicio = num1
+            fin = num2
+        Sino
+            inicio = num2
+            fin = num1
+        Fin Si
 
-# Imprimir los números pares comprendidos entre ellos
-print(f"Números pares entre {inicio} y {fin}:")
-for numero in range(inicio + 1, fin):
-    if numero % 2 == 0:
-        print(numero)
-    
-
+        Escribir "Números pares entre", inicio, "y", fin, ":"
+        
+        Para numero = inicio + 1 Hasta fin - 1 Hacer
+            Si numero % 2 == 0 Entonces
+                Escribir numero
+            Fin Si
+        Fin Para
+        
+        Fin
 
 
 
