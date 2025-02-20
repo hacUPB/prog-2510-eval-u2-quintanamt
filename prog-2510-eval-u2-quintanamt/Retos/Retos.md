@@ -1,3 +1,25 @@
+### Ejercicio Extra de Bucles 
+
+1. Solicitar al usuario 2 números enteros, imprimir en pantalla los numeros pares comprendidos entre ellos. 
+    
+#### Solicitar al usuario dos números enteros
+num1 = int(input("Introduce el primer número entero: "))
+num2 = int(input("Introduce el segundo número entero: "))
+
+# Determinar el menor y el mayor número
+inicio = min(num1, num2)
+fin = max(num1, num2)
+
+# Imprimir los números pares comprendidos entre ellos
+print(f"Números pares entre {inicio} y {fin}:")
+for numero in range(inicio + 1, fin):
+    if numero % 2 == 0:
+        print(numero)
+    
+
+
+
+
 # Instrucciones
 
 Analiza los siguientes ejercicios, para ello utiliza una tabla donde clasifiques las variables de entrada, las de salida y las constantes. Enuncia las ecuaciones involucradas y explique cuál es el análisis o estrategia que utilizará para llegar a la solución del problema.
