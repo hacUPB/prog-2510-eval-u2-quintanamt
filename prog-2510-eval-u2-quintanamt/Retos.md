@@ -169,7 +169,7 @@ Inicio
 
 Fin 
 
-4. Se requiere un algoritmo para determinar cuánto ahorrará en pesos una persona diariamente, y en un año, si ahorra 3¢ el primero de enero, 9¢ el dos de enero, 27¢ el 3 de enero y así sucesivamente todo el año. Represente la solución mediante pseudocódigo.
+7. Se requiere un algoritmo para determinar cuánto ahorrará en pesos una persona diariamente, y en un año, si ahorra 3¢ el primero de enero, 9¢ el dos de enero, 27¢ el 3 de enero y así sucesivamente todo el año. Represente la solución mediante pseudocódigo.
 
 Inicio
 
@@ -241,3 +241,37 @@ Inicio
     Escribir "El total a pagar por todos los artículos es:", totalPagar
 
 Fin
+
+9. Realice un algoritmo y represéntelo mediante pseudocódigo para obtener una función exponencial, la cual está dada por:
+    
+    $𝑒^𝑥 = 1+\frac x {1!} + \frac {x^2}{2!}+ \frac {x^3}{3!}+ …$
+
+
+    Inicio
+
+        // Pedir el valor de x y la precisión deseada
+        Escribir "Ingrese el valor de x:"
+        Leer x
+        Escribir "Ingrese la precisión deseada (número de términos):"
+        Leer precision
+
+        // Inicializar variables
+        resultado = 1.0  // El primer término de la serie es 1
+        termino = 1.0    // Inicializar el primer término
+        factorial = 1    // Inicializar el factorial
+
+        // Calcular la serie de Taylor para e^x
+        Para i = 1 Hasta precision Hacer
+            factorial = factorial * i  // Calcular el factorial de i
+            termino = (x^i) / factorial  // Calcular el término actual
+            resultado = resultado + termino  // Sumar el término al resultado
+        Fin Para
+
+        // Mostrar el resultado
+        Escribir "El valor aproximado de e^", x, " es:", resultado
+    Fin
+
+
+10. Realice un algoritmo para obtener el seno de un ángulo y represéntelo mediante pseudocódigo. Utilice la siguiente ecuación:
+$Sen x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + ...$
+
