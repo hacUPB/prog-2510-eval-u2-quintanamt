@@ -65,11 +65,14 @@ tal y como se muestra en la figura 1. Realice un diagrama de flujo y pseudocódi
 que representen el algoritmo para obtener la distancia entre
 esos puntos.
 
-![alt text](<Images/Captura de pantalla 2025-02-19 a la(s) 11.44.48 a.m..png>)
+![alt text](<../Images/Captura de pantalla 2025-02-19 a la(s) 11.44.48 a.m..png>)
+
+
 
 ### Diagrama de flujo 
 
-![alt text](<Images/Captura de pantalla 2025-02-19 a la(s) 12.10.40 p.m..png>)
+![alt text](<../Images/Captura de pantalla 2025-02-19 a la(s) 12.10.40 p.m..png>)
+
 ### Pseudocódigo 
 
     Inicio
@@ -105,7 +108,7 @@ diagrama de flujo y pseudocódigo (1 pulgada = 0.0254 m).
 
 ### Diagrama de Flujo 
 
-![alt text](<Images/Captura de pantalla 2025-02-19 a la(s) 12.18.25 p.m..png>)
+![alt text](<../Images/Captura de pantalla 2025-02-19 a la(s) 12.18.25 p.m..png>)
 
 ### Pseudocodigo
     Inicio
@@ -124,8 +127,7 @@ diagrama de flujo y pseudocódigo (1 pulgada = 0.0254 m).
 Recuerde que por Pitágoras se tiene que: $C^2 = A^2 + B^2$.
 
 ### Diagrama de Flujo 
-
-![alt text](<Images/Captura de pantalla 2025-02-19 a la(s) 12.32.07 p.m..png>)
+![alt text](<../Images/Captura de pantalla 2025-02-19 a la(s) 12.32.07 p.m..png>)
 
 ### Pseudoódigo
 
