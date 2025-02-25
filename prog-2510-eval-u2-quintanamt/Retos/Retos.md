@@ -27,6 +27,31 @@
         
         Fin
 
+2. Serie de Fibonacci 
+
+       Inicio
+        Escribir "¿Cuántos números de la serie de Fibonacci desea imprimir?"
+        Leer cantidad
+
+        Si cantidad <= 0 Entonces
+        Escribir "La cantidad debe ser mayor que 0."
+        Sino
+        a = 0
+        b = 1
+        Escribir a
+        Si cantidad > 1 Entonces
+            Escribir b
+        Fin Si
+
+        Para i = 3 Hasta cantidad Hacer
+            c = a + b
+            Escribir c
+            a = b
+            b = c
+        Fin Para
+         Fin Si
+        Fin
+
 
 
 # Instrucciones
