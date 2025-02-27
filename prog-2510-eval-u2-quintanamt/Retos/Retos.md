@@ -64,8 +64,8 @@ Analiza los siguientes ejercicios, para ello utiliza una tabla donde clasifiques
 tal y como se muestra en la figura 1. Realice un diagrama de flujo y pseudocódigo
 que representen el algoritmo para obtener la distancia entre
 esos puntos.
-
 ![alt text](<../Images/Captura de pantalla 2025-02-19 a la(s) 11.44.48 a.m..png>)
+
 
 ### Puntos a tener en cuenta para realizar el Diagrama de Flujo y el Algoritmo:
 1. Para hallar la distancia entre 2 puntos tomamos los puntos de la recta para hallar la pendiente  P1 (x1,y1) y P2 (x2,y2)
