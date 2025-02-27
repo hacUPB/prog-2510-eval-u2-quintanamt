@@ -171,10 +171,123 @@ Recuerde que por Pitágoras se tiene que: $C^2 = A^2 + B^2$.
     Escribir "La hipotenusa del triángulo rectángulo es:", C
     Fin
 
-4. 
+4. Se requiere determinar la edad actual de una persona basándose en su fecha de nacimiento. Además, es necesario establecer si la persona ya ha cumplido años en el año en curso, si aún no lo ha hecho, o si hoy es su cumpleaños, para celebrarlo. La fecha de nacimiento y la fecha actual estarán representadas mediante tres variables: día, mes y año.
+    
+    **Instrucciones:**
+    
+    - Diseñe un algoritmo que permita calcular la edad de la persona.
+    - Dentro de la solución, determine si la persona ya celebró su cumpleaños este año o si aún no lo ha hecho.
+    - Verifique si la fecha actual corresponde al día de su cumpleaños. De ser así, imprima el mensaje “Feliz Cumpleaños”.
+    - Represente la solución utilizando **pseudocódigo** claro y estructurado.
+
+### Analisis 
+Entrada de Datos:
+
+Se solicitan la fecha de nacimiento (dia_nac, mes_nac, anio_nac) y la fecha actual (dia_actual, mes_actual, anio_actual).
+
+Cálculo Inicial de la Edad:
+
+La edad se inicializa como la diferencia entre el año actual y el año de nacimiento:
+edad = anio_actual - anio_nac.
+
+Ajuste de la Edad:
+
+Si el mes actual es anterior al mes de nacimiento:
+La persona aún no cumple años, por lo que se reduce la edad en 1.
+Ejemplo: Nacido en noviembre y estamos en enero.
+
+Si el mes actual es igual al mes de nacimiento pero el día actual es anterior al día de nacimiento:
+Tampoco ha cumplido años, y se resta 1 a la edad.
+Ejemplo: Nacido el 15 de marzo y estamos el 10 de marzo.
+
+Verificación del Cumpleaños:
+
+Si el día y mes actuales coinciden con los de nacimiento, se imprime: "¡Feliz Cumpleaños!".
+
+Determinación del Estado del Cumpleaños:
+
+Ya celebró:
+Si el mes actual es posterior al mes de nacimiento, o si es el mismo mes pero el día actual es igual o posterior.
+Ejemplo: Nacido en abril y estamos en mayo, o nacido el 5 de junio y estamos el 10 de junio.
+
+Aún no ha celebrado:
+En caso contrario.
+Ejemplo: Nacido en diciembre y estamos en enero.
+
+
+    Inicio
+
+        // Declarar variables para fecha de nacimiento y fecha actual
+        Entero dia_nac, mes_nac, anio_nac
+        Entero dia_actual, mes_actual, anio_actual
+        Entero edad
+        Booleano yaCelebro
+
+        // Solicitar fecha de nacimiento
+        Escribir "Ingrese su día de nacimiento (1-31):"
+        Leer dia_nac
+        Escribir "Ingrese su mes de nacimiento (1-12):"
+        Leer mes_nac
+        Escribir "Ingrese su año de nacimiento:"
+        Leer anio_nac
+
+        // Solicitar fecha actual
+        Escribir "Ingrese el día actual (1-31):"
+        Leer dia_actual
+        Escribir "Ingrese el mes actual (1-12):"
+        Leer mes_actual
+        Escribir "Ingrese el año actual:"
+        Leer anio_actual
+
+        // Calcular la edad inicial
+        edad = anio_actual - anio_nac
+
+        // Verificar si ya cumplió años este año
+        Si mes_actual < mes_nac Entonces
+            edad = edad - 1
+            yaCelebro = Falso
+        Sino Si mes_actual == mes_nac Entonces
+            Si dia_actual < dia_nac Entonces
+                edad = edad - 1
+                yaCelebro = Falso
+            Sino Si dia_actual == dia_nac Entonces
+                Escribir "¡Feliz Cumpleaños!"
+                yaCelebro = Verdadero
+            Sino
+                yaCelebro = Verdadero
+            Fin Si
+        Sino
+            yaCelebro = Verdadero
+        Fin Si
+
+        // Mostrar la edad y el estado del cumpleaños
+        Escribir "Edad actual: ", edad
+        Si yaCelebro Entonces
+            Escribir "Ya ha celebrado su cumpleaños este año."
+        Sino
+            Escribir "Aún no ha celebrado su cumpleaños este año."
+        Fin Si
+    Fin
 
 5. Realice un algoritmo que permita determinar el sueldo semanal de un trabajador con base en las horas trabajadas y el pago por hora, considerando que a partir de la hora número 41 y hasta la 45, cada hora se le paga el doble, de la hora 46 a la 50, el triple, y que trabajar
 más de 50 horas no está permitido. Represente el algoritmo mediante pseudocódigo.
+
+### Analisis 
+1. Objetivo: Obtener las horas trabajadas y el pago por horas
+-Se solicitan los valores necesarios para el cálculo: Horas trabajadas y tarifas por hora. 
+2. Inicialización del Sueldo
+-Se inicializa la variable que almacenará el resultado final
+3.  Evaluacion de las horas en diferentes rangos
+
+(a) si horas trabajadas <= 40 
+##### (Horas normales)
+(b) si horas trabajadas (41-45) Horas se multiplica
+Sino Si horasTrabajadas <= 45 Entonces
+    sueldoSemanal = 40 * pagoPorHora + (horasTrabajadas - 40) * pagoPorHora * 2
+##### (Horas extras dobles)
+(c) Sino Si horasTrabajadas <= 50 Entonces
+    sueldoSemanal = 40 * pagoPorHora + 5 * pagoPorHora * 2 + (horasTrabajadas - 45) * pagoPorHora * 3
+##### (Horas extra tiples)
 
 Inicio
 
@@ -188,13 +301,13 @@ Inicio
     sueldoSemanal = 0
 
     // Calcular el sueldo basado en las horas trabajadas
-    Si horasTrabajadas <= 40 Entonces
+    Si horasTrabajadas <= 40 
         sueldoSemanal = horasTrabajadas * pagoPorHora
     Sino
-        Si horasTrabajadas <= 45 Entonces
+        Si horasTrabajadas <= 45 
             sueldoSemanal = 40 * pagoPorHora + (horasTrabajadas - 40) * pagoPorHora * 2
         Sino
-            Si horasTrabajadas <= 50 Entonces
+            Si horasTrabajadas <= 50 
                 sueldoSemanal = 40 * pagoPorHora + 5 * pagoPorHora * 2 + (horasTrabajadas - 45) * pagoPorHora * 3
             Sino
                 Escribir "No está permitido trabajar más de 50 horas."
@@ -210,6 +323,33 @@ Inicio
     Fin Si
     
 6. Se requiere un algoritmo para determinar, de N cantidades, cuántas son cero, cuántas son menores a cero, y cuántas son mayores a cero. Realice el pseudocódigo para representarlo, utilizando el ciclo apropiado.
+
+(a) Se inicializan tres variables para almacenar los conteos de cada categoría:
+
+-contadorCero: Cantidad de números iguales a cero.
+
+-contadorMenorCero: Cantidad de números negativos.
+
+-contadorMayorCero: Cantidad de números positivos.
+
+(b) Se solicita al usuario el valor de N (total de números a evaluar).
+
+(c)Se utiliza un bucle Para (ciclo definido) para iterar N veces:
+
+(d)Para cada número ingresado, se evalúa su valor mediante condiciones anidadas:
+
+(e) Estructura lógica:
+
+Si el número es cero, incrementa contadorCero.
+
+Si no es cero, verifica si es negativo:
+
+Si es negativo, incrementa contadorMenorCero.
+
+Si no es negativo (y ya se descartó que sea cero), es positivo, por lo que incrementa contadorMayorCero.
+
+(f) mostrar resultados 
+
 
 Inicio
 
@@ -228,10 +368,10 @@ Inicio
         Leer cantidad
 
         // Determinar si la cantidad es cero, menor a cero o mayor a cero
-        Si cantidad == 0 Entonces
+        Si cantidad == 0 
             contadorCero = contadorCero + 1
         Sino
-            Si cantidad < 0 Entonces
+            Si cantidad < 0
                 contadorMenorCero = contadorMenorCero + 1
             Sino
                 contadorMayorCero = contadorMayorCero + 1
@@ -247,6 +387,17 @@ Inicio
 Fin 
 
 7. Se requiere un algoritmo para determinar cuánto ahorrará en pesos una persona diariamente, y en un año, si ahorra 3¢ el primero de enero, 9¢ el dos de enero, 27¢ el 3 de enero y así sucesivamente todo el año. Represente la solución mediante pseudocódigo.
+
+(A) Tenemos las variables:
+-ahorro diario= 0.03
+-ahorro total=0.0
+diasEnAnio= 365 (dias del año)
+
+(B) Pasar sobre cada día del año
+Para dia= 1 Hasta diasEnAnio hacer
+(C) Mostrar el ahorro del día actual 
+(D) Dia (iteración) 
+
 
 Inicio
 
@@ -275,6 +426,45 @@ Fin
 8. Realice el algoritmo para determinar cuánto pagará una persona que adquiere N artículos, los cuales están de promoción. Considere que si su precio es mayor o igual a $200 se le aplica un descuento de 15%, y si su precio es mayor a $100, pero menor a $200, el descuento es de
 12%; de lo contrario, solo se le aplica 10%. Se debe saber cuál es el costo y el descuento que tendrá cada uno de los artículos y finalmente cuánto se pagará por todos los artículos obtenidos. Represente la solución mediante pseudocódigo.
 
+### Analisis 
+1. Inicialización de Variables:
+
+totalPagar = 0.0: 
+2. Entrada del Número de Artículos:
+
+Leer N: Se lee el número de artículos ingresado por el usuario y se almacena en la variable N.
+
+3. Bucle para Procesar Cada Artículo:
+
+Para i = 1 Hasta N Hacer: Se inicia un bucle que se ejecutará N veces, una vez por cada artículo. La variable i se utiliza como contador del bucle.
+Escribir "Ingrese el precio del artículo ", i, ":": Se solicita al usuario que ingrese el precio del artículo actual (indicado por el valor de i).
+Leer precio: Se lee el precio ingresado por el usuario y se almacena en la variable precio.
+
+4. Cálculo del Descuento:
+
+Se utiliza una estructura condicional Si-Sino-Fin Si para determinar el descuento aplicable según el precio del artículo:
+Si precio >= 200
+descuento = precio * 0.15: Se calcula el descuento y se almacena en la variable descuento.
+Sino Si precio > 100 
+descuento = precio * 0.12: 
+Sino: Si el precio es menor o igual a 100
+descuento = precio * 0.10: Se calcula el descuento y se almacena en descuento.
+
+Fin Si: Fin de la estructura condicional.
+5. Cálculo del Costo con Descuento:
+
+costoConDescuento = precio - descuento
+
+6. Mostrar Información del Artículo:
+
+7. Acumulación del Total a Pagar:
+
+totalPagar = totalPagar + costoConDescuento: Se suma el costo del artículo actual (con descuento) al total acumulado en la variable totalPagar.
+
+8. Fin del Bucle:
+
+9. Mostrar el Total a Pagar
+
 Inicio
 
     // Inicializar variables
@@ -291,10 +481,10 @@ Inicio
         Leer precio
 
         // Determinar el descuento según el precio
-        Si precio >= 200 Entonces
+        Si precio >= 200 
             descuento = precio * 0.15
         Sino
-            Si precio > 100 Entonces
+            Si precio > 100
                 descuento = precio * 0.12
             Sino
                 descuento = precio * 0.10
@@ -322,6 +512,35 @@ Fin
 9. Realice un algoritmo y represéntelo mediante pseudocódigo para obtener una función exponencial, la cual está dada por:
     
     $𝑒^𝑥 = 1+\frac x {1!} + \frac {x^2}{2!}+ \frac {x^3}{3!}+ …$
+
+#### Analisis 
+Entrada de Datos:
+
+Escribir "Ingrese el valor de x:": Se le pide al usuario que introduzca el valor de "x".
+x= Variable 
+Pedimos la precisión deseada (número de términos)
+
+Leer precision: Se guarda el valor de la "precisión" que ingresó el usuario.
+
+Inicialización de Variables:
+
+resultado = 1.0: Se empieza con un resultado inicial de 1. Esto se debe a que el primer término de la serie de Taylor para e^x es 1.
+
+termino = 1.0: Se inicializa el primer término en 1.
+factorial = 1: Se inicializa la variable "factorial" en 1, ya que se usará para calcular factoriales.
+
+Cálculo de la Serie de Taylor:
+
+Para i = 1 Hasta precision Hacer: Se inicia un bucle que se repite tantas veces como el valor de "precisión" que ingresó el usuario.
+factorial = factorial * i: Se calcula el factorial del número actual ("i").
+termino = (x^i) / factorial: Se calcula el siguiente término de la serie de Taylor.
+resultado = resultado + termino: Se suma el término calculado al "resultado" acumulado.
+
+Fin Para: Termina el bucle.
+Mostrar el Resultado:
+
+Escribir "El valor aproximado de e^", x, " es:", resultado: Se muestra el resultado final, que es la aproximación de e^x.
+
 
 
     Inicio
@@ -351,3 +570,4 @@ Fin
 
 10. Realice un algoritmo para obtener el seno de un ángulo y represéntelo mediante pseudocódigo. Utilice la siguiente ecuación:
 $Sen x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + ...$
+
