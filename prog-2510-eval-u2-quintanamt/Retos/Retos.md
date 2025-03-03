@@ -82,13 +82,13 @@ esos puntos.
 ### Pseudocódigo 
 
     Inicio
-    // Pedir las coordenadas del primer punto
+    
     Escribir "Ingrese la coordenada x del primer punto:"
     Leer x1
     Escribir "Ingrese la coordenada y del primer punto:"
     Leer y1
     
-    // Pedir las coordenadas del segundo punto
+  
     Escribir "Ingrese la coordenada x del segundo punto:"
     Leer x2
     Escribir "Ingrese la coordenada y del segundo punto:"
@@ -98,7 +98,7 @@ esos puntos.
     deltax = x2 - x1
     deltay = y2 - y1
     
-    // Calcular la distancia
+ 
     distancia = raizCuadrada(deltax * deltax + deltay * deltay)
     
     // Mostrar el resultado
@@ -284,44 +284,44 @@ más de 50 horas no está permitido. Represente el algoritmo mediante pseudocód
 (b) si horas trabajadas (41-45) Horas se multiplica
 Sino Si horasTrabajadas <= 45 Entonces
     sueldoSemanal = 40 * pagoPorHora + (horasTrabajadas - 40) * pagoPorHora * 2
-##### (Horas extras dobles)
+#### (Horas extras dobles)
 (c) Sino Si horasTrabajadas <= 50 Entonces
     sueldoSemanal = 40 * pagoPorHora + 5 * pagoPorHora * 2 + (horasTrabajadas - 45) * pagoPorHora * 3
-##### (Horas extra tiples)
+#### (Horas extra tiples)
 
-Inicio
+    Inicio
 
-    // Pedir las horas trabajadas y el pago por hora
-    Escribir "Ingrese las horas trabajadas en la semana:"
-    Leer horasTrabajadas
-    Escribir "Ingrese el pago por hora:"
-    Leer pagoPorHora
+        // Pedir las horas trabajadas y el pago por hora
+        Escribir "Ingrese las horas trabajadas en la semana:"
+        Leer horasTrabajadas
+        Escribir "Ingrese el pago por hora:"
+        Leer pagoPorHora
 
-    // Inicializar el sueldo semanal
-    sueldoSemanal = 0
+        // Inicializar el sueldo semanal
+        sueldoSemanal = 0
 
-    // Calcular el sueldo basado en las horas trabajadas
-    Si horasTrabajadas <= 40 
-        sueldoSemanal = horasTrabajadas * pagoPorHora
-    Sino
-        Si horasTrabajadas <= 45 
-            sueldoSemanal = 40 * pagoPorHora + (horasTrabajadas - 40) * pagoPorHora * 2
+        // Calcular el sueldo basado en las horas trabajadas
+        Si horasTrabajadas <= 40 
+            sueldoSemanal = horasTrabajadas * pagoPorHora
         Sino
-            Si horasTrabajadas <= 50 
-                sueldoSemanal = 40 * pagoPorHora + 5 * pagoPorHora * 2 + (horasTrabajadas - 45) * pagoPorHora * 3
+            Si horasTrabajadas <= 45 
+                sueldoSemanal = 40 * pagoPorHora + (horasTrabajadas - 40) * pagoPorHora * 2
             Sino
-                Escribir "No está permitido trabajar más de 50 horas."
-                sueldoSemanal = 0
+                Si horasTrabajadas <= 50 
+                    sueldoSemanal = 40 * pagoPorHora + 5 * pagoPorHora * 2 + (horasTrabajadas - 45) * pagoPorHora * 3
+                Sino
+                    Escribir "No está permitido trabajar más de 50 horas."
+                    sueldoSemanal = 0
+                Fin Si
             Fin Si
         Fin Si
-    Fin Si
 
-    // Mostrar el sueldo semanal
-    Si sueldoSemanal > 0 Entonces
-        Escribir "El sueldo semanal es:", sueldoSemanal
-    
-    Fin Si
-    
+        // Mostrar el sueldo semanal
+        Si sueldoSemanal > 0 Entonces
+            Escribir "El sueldo semanal es:", sueldoSemanal
+        
+        Fin Si
+        
 6. Se requiere un algoritmo para determinar, de N cantidades, cuántas son cero, cuántas son menores a cero, y cuántas son mayores a cero. Realice el pseudocódigo para representarlo, utilizando el ciclo apropiado.
 
 (a) Se inicializan tres variables para almacenar los conteos de cada categoría:
@@ -351,163 +351,171 @@ Si no es negativo (y ya se descartó que sea cero), es positivo, por lo que incr
 (f) mostrar resultados 
 
 
-Inicio
+    Inicio
 
-    // Inicializar contadores
-    contadorCero = 0
-    contadorMenorCero = 0
-    contadorMayorCero = 0
+        // Inicializar contadores
+        contadorCero = 0
+        contadorMenorCero = 0
+        contadorMayorCero = 0
 
-    // Pedir el número de cantidades
-    Escribir "Ingrese el número de cantidades:"
-    Leer N
+        // Pedir el número de cantidades
+        Escribir "Ingrese el número de cantidades:"
+        Leer N
 
-    // Iterar sobre las N cantidades
-    Para i = 1 Hasta N Hacer
-        Escribir "Ingrese la cantidad ", i, ":"
-        Leer cantidad
+        // Iterar sobre las N cantidades
+        Para i = 1 Hasta N Hacer
+            Escribir "Ingrese la cantidad ", i, ":"
+            Leer cantidad
 
-        // Determinar si la cantidad es cero, menor a cero o mayor a cero
-        Si cantidad == 0 
-            contadorCero = contadorCero + 1
-        Sino
-            Si cantidad < 0
-                contadorMenorCero = contadorMenorCero + 1
+            // Determinar si la cantidad es cero, menor a cero o mayor a cero
+            Si cantidad == 0 
+                contadorCero = contadorCero + 1
             Sino
-                contadorMayorCero = contadorMayorCero + 1
+                Si cantidad < 0
+                    contadorMenorCero = contadorMenorCero + 1
+                Sino
+                    contadorMayorCero = contadorMayorCero + 1
+                Fin Si
             Fin Si
-        Fin Si
-    Fin Para
+        Fin Para
 
-    // Mostrar los resultados
-    Escribir "Cantidades iguales a cero:", contadorCero
-    Escribir "Cantidades menores a cero:", contadorMenorCero
-    Escribir "Cantidades mayores a cero:", contadorMayorCero
+        // Mostrar los resultados
+        Escribir "Cantidades iguales a cero:", contadorCero
+        Escribir "Cantidades menores a cero:", contadorMenorCero
+        Escribir "Cantidades mayores a cero:", contadorMayorCero
 
-Fin 
+    Fin 
 
 7. Se requiere un algoritmo para determinar cuánto ahorrará en pesos una persona diariamente, y en un año, si ahorra 3¢ el primero de enero, 9¢ el dos de enero, 27¢ el 3 de enero y así sucesivamente todo el año. Represente la solución mediante pseudocódigo.
 
-(A) Tenemos las variables:
--ahorro diario= 0.03
--ahorro total=0.0
-diasEnAnio= 365 (dias del año)
+Inicialización de Variables:
 
-(B) Pasar sobre cada día del año
-Para dia= 1 Hasta diasEnAnio hacer
-(C) Mostrar el ahorro del día actual 
-(D) Dia (iteración) 
+ahorroDiario = 0.03: Se establece el ahorro inicial del primer día en 0.03 pesos (3 centavos).
+ahorroTotal = 0.0: Se inicializa el ahorro total acumulado en 0.
+diasEnAnio = 365: Se define el número de días en un año como 365.
+Bucle para Cada Día del Año:
+
+Para dia = 1 Hasta diasEnAnio Hacer: Se inicia un bucle que se repite 365 veces, una vez para cada día del año.
+Escribir "Día", dia, ": Ahorro diario =", ahorroDiario, "pesos": Se muestra el número del día y el ahorro correspondiente a ese día.
+ahorroTotal = ahorroTotal + ahorroDiario: Se suma el ahorro del día actual al ahorro total acumulado.
+ahorroDiario = ahorroDiario * 3: Se calcula el ahorro para el siguiente día, triplicando el ahorro del día actual.
+Fin Para: Termina el bucle.
+Mostrar el Ahorro Total:
+
+Escribir "El ahorro total en un año es:", ahorroTotal, "pesos": Se muestra el ahorro total acumulado al final del año.
+En palabras simples:
 
 
-Inicio
 
-    // Inicializar variables
-    ahorroDiario = 0.03  // Ahorro inicial en pesos (3 centavos)
-    ahorroTotal = 0.0
-    diasEnAnio = 365
+        Inicio
 
-    // Iterar sobre cada día del año
-    Para dia = 1 Hasta diasEnAnio Hacer
-        // Mostrar el ahorro del día actual
-        Escribir "Día", dia, ": Ahorro diario =", ahorroDiario, "pesos"
+            // Inicializar variables
+            ahorroDiario = 0.03  // Ahorro inicial en pesos (3 centavos)
+            ahorroTotal = 0.0
+            diasEnAnio = 365
 
-        // Sumar el ahorro diario al ahorro total
-        ahorroTotal = ahorroTotal + ahorroDiario
+            // Iterar sobre cada día del año
+            Para dia = 1 Hasta diasEnAnio Hacer
+                // Mostrar el ahorro del día actual
+                Escribir "Día", dia, ": Ahorro diario =", ahorroDiario, "pesos"
 
-        // Calcular el ahorro para el próximo día (multiplicar por 3)
-        ahorroDiario = ahorroDiario * 3
-    Fin Para
+                // Sumar el ahorro diario al ahorro total
+                ahorroTotal = ahorroTotal + ahorroDiario
 
-    // Mostrar el ahorro total en el año
-    Escribir "El ahorro total en un año es:", ahorroTotal, "pesos"
+                // Calcular el ahorro para el próximo día (multiplicar por 3)
+                ahorroDiario = ahorroDiario * 3
+            Fin Para
 
-Fin
+            // Mostrar el ahorro total en el año
+            Escribir "El ahorro total en un año es:", ahorroTotal, "pesos"
+
+       
+        Fin
 
 8. Realice el algoritmo para determinar cuánto pagará una persona que adquiere N artículos, los cuales están de promoción. Considere que si su precio es mayor o igual a $200 se le aplica un descuento de 15%, y si su precio es mayor a $100, pero menor a $200, el descuento es de
-12%; de lo contrario, solo se le aplica 10%. Se debe saber cuál es el costo y el descuento que tendrá cada uno de los artículos y finalmente cuánto se pagará por todos los artículos obtenidos. Represente la solución mediante pseudocódigo.
+  12%; de lo contrario, solo se le aplica 10%. Se debe saber cuál es el costo y el descuento que tendrá cada uno de los artículos y finalmente cuánto se pagará por todos los artículos obtenidos. Represente la solución mediante pseudocódigo.
 
-### Analisis 
-1. Inicialización de Variables:
+ ### Analisis 
+ 1. Inicialización de Variables:
 
-totalPagar = 0.0: 
-2. Entrada del Número de Artículos:
+ totalPagar = 0.0: 
+   2. Entrada del Número de Artículos:
 
-Leer N: Se lee el número de artículos ingresado por el usuario y se almacena en la variable N.
+   Leer N: Se lee el número de artículos ingresado por el usuario y se almacena en la variable N.
 
-3. Bucle para Procesar Cada Artículo:
+ 3. Bucle para Procesar Cada Artículo:
 
 Para i = 1 Hasta N Hacer: Se inicia un bucle que se ejecutará N veces, una vez por cada artículo. La variable i se utiliza como contador del bucle.
-Escribir "Ingrese el precio del artículo ", i, ":": Se solicita al usuario que ingrese el precio del artículo actual (indicado por el valor de i).
-Leer precio: Se lee el precio ingresado por el usuario y se almacena en la variable precio.
+ Escribir "Ingrese el precio del artículo ", i, ":": Se solicita al usuario que ingrese el precio del artículo actual (indicado por el valor de i).
+ Leer precio: Se lee el precio ingresado por el usuario y se almacena en la variable precio.
 
-4. Cálculo del Descuento:
+ 4. Cálculo del Descuento:
 
-Se utiliza una estructura condicional Si-Sino-Fin Si para determinar el descuento aplicable según el precio del artículo:
-Si precio >= 200
-descuento = precio * 0.15: Se calcula el descuento y se almacena en la variable descuento.
-Sino Si precio > 100 
-descuento = precio * 0.12: 
-Sino: Si el precio es menor o igual a 100
+  Se utiliza una estructura condicional Si-Sino-Fin Si para determinar el descuento aplicable según el precio del artículo:
+ Si precio >= 200
+ descuento = precio * 0.15: Se calcula el descuento y se almacena en la variable descuento.
+ Sino Si precio > 100 
+ descuento = precio * 0.12: 
+ Sino: Si el precio es menor o igual a 100
 descuento = precio * 0.10: Se calcula el descuento y se almacena en descuento.
 
-Fin Si: Fin de la estructura condicional.
-5. Cálculo del Costo con Descuento:
+ Fin Si: Fin de la estructura condicional.
+  5. Cálculo del Costo con Descuento:
 
 costoConDescuento = precio - descuento
+ 6. Mostrar Información del Artículo:
 
-6. Mostrar Información del Artículo:
+ 7. Acumulación del Total a Pagar:
 
-7. Acumulación del Total a Pagar:
+ totalPagar = totalPagar + costoConDescuento: Se suma el costo del artículo actual (con descuento) al total acumulado en la variable totalPagar.
 
-totalPagar = totalPagar + costoConDescuento: Se suma el costo del artículo actual (con descuento) al total acumulado en la variable totalPagar.
+  8. Fin del Bucle:
 
-8. Fin del Bucle:
+  9. Mostrar el Total a Pagar
 
-9. Mostrar el Total a Pagar
+    Inicio
 
-Inicio
+            // Inicializar variables
+            totalPagar = 0.0
 
-    // Inicializar variables
-    totalPagar = 0.0
+            // Pedir el número de artículos
+            Escribir "Ingrese el número de artículos:"
+            Leer N
 
-    // Pedir el número de artículos
-    Escribir "Ingrese el número de artículos:"
-    Leer N
+            // Iterar sobre cada artículo
+            Para i = 1 Hasta N Hacer
+                // Pedir el precio del artículo
+                Escribir "Ingrese el precio del artículo ", i, ":"
+                Leer precio
 
-    // Iterar sobre cada artículo
-    Para i = 1 Hasta N Hacer
-        // Pedir el precio del artículo
-        Escribir "Ingrese el precio del artículo ", i, ":"
-        Leer precio
+                // Determinar el descuento según el precio
+                Si precio >= 200 
+                    descuento = precio * 0.15
+                Sino
+                    Si precio > 100
+                        descuento = precio * 0.12
+                    Sino
+                        descuento = precio * 0.10
+                    Fin Si
+                Fin Si
 
-        // Determinar el descuento según el precio
-        Si precio >= 200 
-            descuento = precio * 0.15
-        Sino
-            Si precio > 100
-                descuento = precio * 0.12
-            Sino
-                descuento = precio * 0.10
-            Fin Si
-        Fin Si
+                // Calcular el costo con descuento
+                costoConDescuento = precio - descuento
 
-        // Calcular el costo con descuento
-        costoConDescuento = precio - descuento
+                // Mostrar el costo y el descuento del artículo
+                Escribir "Artículo ", i, ":"
+                Escribir "  Precio original:", precio
+                Escribir "  Descuento:", descuento
+                Escribir "  Costo con descuento:", costoConDescuento
 
-        // Mostrar el costo y el descuento del artículo
-        Escribir "Artículo ", i, ":"
-        Escribir "  Precio original:", precio
-        Escribir "  Descuento:", descuento
-        Escribir "  Costo con descuento:", costoConDescuento
+                // Sumar al total a pagar
+                totalPagar = totalPagar + costoConDescuento
+            Fin Para
 
-        // Sumar al total a pagar
-        totalPagar = totalPagar + costoConDescuento
-    Fin Para
+            // Mostrar el total a pagar por todos los artículos
+            Escribir "El total a pagar por todos los artículos es:", totalPagar
 
-    // Mostrar el total a pagar por todos los artículos
-    Escribir "El total a pagar por todos los artículos es:", totalPagar
-
-Fin
+    Fin
 
 9. Realice un algoritmo y represéntelo mediante pseudocódigo para obtener una función exponencial, la cual está dada por:
     
@@ -568,6 +576,46 @@ Escribir "El valor aproximado de e^", x, " es:", resultado: Se muestra el result
     Fin
 
 
+
+
 10. Realice un algoritmo para obtener el seno de un ángulo y represéntelo mediante pseudocódigo. Utilice la siguiente ecuación:
 $Sen x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + ...$
 
+Explicación:
+
+calcular Seno(x, precision):
+
+x: El ángulo en radianes.
+precision: Cuántos términos de la serie usar.
+
+Inicialización:
+seno comienza con el primer término (x).
+termino guarda el valor del término actual.
+signo alterna entre -1 y 1.
+
+Bucle:
+Se calcula termino usando el anterior y la fórmula.
+Suma o resta termino a seno según el signo.
+Cambia el signo.
+Resultado:
+Devuelve el valor aproximado del seno.
+Puntos Clave:
+
+
+
+
+    Inicio
+
+        Función calcularSeno(x, precision):
+            seno = x
+            termino = x
+            signo = -1
+            
+            Para i desde 1 hasta precision:
+                termino = termino * x * x / ((2 * i) * (2 * i + 1))
+                seno = seno + signo * termino
+                signo = -signo
+            
+            Retornar seno
+    Fin
+    
