@@ -181,6 +181,7 @@ Recuerde que por Pitágoras se tiene que: $C^2 = A^2 + B^2$.
     - Represente la solución utilizando **pseudocódigo** claro y estructurado.
 
 ### Analisis 
+
 Entrada de Datos:
 
 Se solicitan la fecha de nacimiento (dia_nac, mes_nac, anio_nac) y la fecha actual (dia_actual, mes_actual, anio_actual).
@@ -272,7 +273,7 @@ Ejemplo: Nacido en diciembre y estamos en enero.
 5. Realice un algoritmo que permita determinar el sueldo semanal de un trabajador con base en las horas trabajadas y el pago por hora, considerando que a partir de la hora número 41 y hasta la 45, cada hora se le paga el doble, de la hora 46 a la 50, el triple, y que trabajar
 más de 50 horas no está permitido. Represente el algoritmo mediante pseudocódigo.
 
-### Analisis 
+#### Analisis 
 1. Objetivo: Obtener las horas trabajadas y el pago por horas
 -Se solicitan los valores necesarios para el cálculo: Horas trabajadas y tarifas por hora. 
 2. Inicialización del Sueldo
@@ -280,14 +281,16 @@ más de 50 horas no está permitido. Represente el algoritmo mediante pseudocód
 3.  Evaluacion de las horas en diferentes rangos
 
 (a) si horas trabajadas <= 40 
-##### (Horas normales)
+(Horas normales)
+
 (b) si horas trabajadas (41-45) Horas se multiplica
 Sino Si horasTrabajadas <= 45 Entonces
     sueldoSemanal = 40 * pagoPorHora + (horasTrabajadas - 40) * pagoPorHora * 2
-#### (Horas extras dobles)
+(Horas extras dobles)
+
 (c) Sino Si horasTrabajadas <= 50 Entonces
     sueldoSemanal = 40 * pagoPorHora + 5 * pagoPorHora * 2 + (horasTrabajadas - 45) * pagoPorHora * 3
-#### (Horas extra tiples)
+(Horas extra tiples)
 
     Inicio
 
@@ -391,15 +394,23 @@ Si no es negativo (y ya se descartó que sea cero), es positivo, por lo que incr
 Inicialización de Variables:
 
 ahorroDiario = 0.03: Se establece el ahorro inicial del primer día en 0.03 pesos (3 centavos).
+
 ahorroTotal = 0.0: Se inicializa el ahorro total acumulado en 0.
+
 diasEnAnio = 365: Se define el número de días en un año como 365.
+
 Bucle para Cada Día del Año:
 
 Para dia = 1 Hasta diasEnAnio Hacer: Se inicia un bucle que se repite 365 veces, una vez para cada día del año.
+
 Escribir "Día", dia, ": Ahorro diario =", ahorroDiario, "pesos": Se muestra el número del día y el ahorro correspondiente a ese día.
+
 ahorroTotal = ahorroTotal + ahorroDiario: Se suma el ahorro del día actual al ahorro total acumulado.
+
 ahorroDiario = ahorroDiario * 3: Se calcula el ahorro para el siguiente día, triplicando el ahorro del día actual.
+
 Fin Para: Termina el bucle.
+
 Mostrar el Ahorro Total:
 
 Escribir "El ahorro total en un año es:", ahorroTotal, "pesos": Se muestra el ahorro total acumulado al final del año.
@@ -446,7 +457,9 @@ En palabras simples:
  3. Bucle para Procesar Cada Artículo:
 
 Para i = 1 Hasta N Hacer: Se inicia un bucle que se ejecutará N veces, una vez por cada artículo. La variable i se utiliza como contador del bucle.
+ 
  Escribir "Ingrese el precio del artículo ", i, ":": Se solicita al usuario que ingrese el precio del artículo actual (indicado por el valor de i).
+ 
  Leer precio: Se lee el precio ingresado por el usuario y se almacena en la variable precio.
 
  4. Cálculo del Descuento:
@@ -454,8 +467,10 @@ Para i = 1 Hasta N Hacer: Se inicia un bucle que se ejecutará N veces, una vez 
   Se utiliza una estructura condicional Si-Sino-Fin Si para determinar el descuento aplicable según el precio del artículo:
  Si precio >= 200
  descuento = precio * 0.15: Se calcula el descuento y se almacena en la variable descuento.
+ 
  Sino Si precio > 100 
  descuento = precio * 0.12: 
+ 
  Sino: Si el precio es menor o igual a 100
 descuento = precio * 0.10: Se calcula el descuento y se almacena en descuento.
 
@@ -540,8 +555,11 @@ factorial = 1: Se inicializa la variable "factorial" en 1, ya que se usará para
 Cálculo de la Serie de Taylor:
 
 Para i = 1 Hasta precision Hacer: Se inicia un bucle que se repite tantas veces como el valor de "precisión" que ingresó el usuario.
+
 factorial = factorial * i: Se calcula el factorial del número actual ("i").
+
 termino = (x^i) / factorial: Se calcula el siguiente término de la serie de Taylor.
+
 resultado = resultado + termino: Se suma el término calculado al "resultado" acumulado.
 
 Fin Para: Termina el bucle.
@@ -586,6 +604,7 @@ Explicación:
 calcular Seno(x, precision):
 
 x: El ángulo en radianes.
+
 precision: Cuántos términos de la serie usar.
 
 Inicialización:
@@ -595,11 +614,16 @@ signo alterna entre -1 y 1.
 
 Bucle:
 Se calcula termino usando el anterior y la fórmula.
+
 Suma o resta termino a seno según el signo.
+
 Cambia el signo.
+
 Resultado:
+
 Devuelve el valor aproximado del seno.
-Puntos Clave:
+
+
 
 
 
