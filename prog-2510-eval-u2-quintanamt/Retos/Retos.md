@@ -210,59 +210,59 @@ Recuerde que por Pitágoras se tiene que: $C^2 = A^2 + B^2$.
 
 
 
-    Inicio
-        // DECLARACIÓN DE VARIABLES //
-        (Entero) dia_nac, mes_nac, anio_nac   // Almacenan fecha de nacimiento //
-        (Entero) dia_actual, mes_actual, anio_actual // Almacenan fecha actual //
-       (Entero) edad                         // Guardará la edad calculada //
-        yaCelebro                  // Indica si celebró cumpleaños //
+        Inicio
+            // DECLARACIÓN DE VARIABLES //
+            (Entero) dia_nac, mes_nac, anio_nac   // Almacena la  fecha de nacimiento //
+            (Entero) dia_actual, mes_actual, anio_actual // Almacena la fecha actual //
+        (Entero) edad                         // Guardará la edad calculada //
+            yaCelebro                  // Indica si celebró cumpleaños //
 
-        // ENTRADA DE DATOS //
-        (Escribir) "Ingrese su día de nacimiento (1-31):"
-        Leer dia_nac                        // Guarda día de nacimiento //
-        Escribir "Ingrese su mes de nacimiento (1-12):"
-        Leer mes_nac                        // Guarda mes de nacimiento //
-        Escribir "Ingrese su año de nacimiento:"
-        Leer anio_nac                       // Guarda año de nacimiento //
+            // ENTRADA DE DATOS //
+            (Escribir) "Ingrese su día de nacimiento (1-31):"
+            Leer dia_nac                        // Guarda día de nacimiento //
+            Escribir "Ingrese su mes de nacimiento (1-12):"
+            Leer mes_nac                        // Guarda mes de nacimiento //
+            Escribir "Ingrese su año de nacimiento:"
+            Leer anio_nac                       // Guarda año de nacimiento //
 
-        Escribir "Ingrese el día actual (1-31):"
-        Leer dia_actual                     // Guarda día actual//
-        Escribir "Ingrese el mes actual (1-12):"
-        Leer mes_actual                     // Guarda mes actual //
-        Escribir "Ingrese el año actual:"
-        Leer anio_actual                    // Guarda año actual // 
+            Escribir "Ingrese el día actual (1-31):"
+            Leer dia_actual                     // Guarda día actual//
+            Escribir "Ingrese el mes actual (1-12):"
+            Leer mes_actual                     // Guarda mes actual //
+            Escribir "Ingrese el año actual:"
+            Leer anio_actual                    // Guarda año actual // 
 
-        // CÁLCULO INICIAL DE EDAD // 
+            // CÁLCULO INICIAL DE EDAD // 
 
-        edad = anio_actual - anio_nac       // Diferencia básica de años //
+            edad = anio_actual - anio_nac       // Diferencia básica de años //
 
-        // AJUSTE POR CUMPLEAÑOS // 
-        Si mes_actual < mes_nac Entonces    // Si no ha llegado al mes Reduce edad calculada // 
-            edad = edad - 1                 
-            yaCelebro = Falso               // No ha celebrado // 
-        Sino Si mes_actual == mes_nac Entonces // Mes de cumpleaños //
-            Si dia_actual < dia_nac Entonces // Antes del día // 
-                edad = edad - 1             // Reduce edad // 
-                yaCelebro = Falso           // No ha celebrado // 
-            Sino Si dia_actual == dia_nac Entonces // ¡Es hoy! // 
-                Escribir "¡Feliz Cumpleaños!" // Mensaje especial // 
-                yaCelebro = Verdadero        // Sí celebró (hoy mismo) //
-            Sino                            // Pasó el día //
-                yaCelebro = Verdadero       // Ya celebró //
+            // AJUSTE POR CUMPLEAÑOS // 
+            Si mes_actual < mes_nac Entonces    // Si no ha llegado al mes Reduce edad calculada // 
+                edad = edad - 1                 
+                yaCelebro = Falso               // No ha celebrado // 
+            Sino Si mes_actual == mes_nac Entonces // Mes de cumpleaños //
+                Si dia_actual < dia_nac Entonces // Antes del día // 
+                    edad = edad - 1             // Reduce edad // 
+                    yaCelebro = Falso           // No ha celebrado // 
+                Sino Si dia_actual == dia_nac Entonces // ¡Es hoy! // 
+                    Escribir "¡Feliz Cumpleaños!" // Mensaje especial // 
+                    yaCelebro = Verdadero        // Sí celebró (hoy mismo) //
+                Sino                            // Pasó el día //
+                    yaCelebro = Verdadero       // Ya celebró //
+                Fin Si
+            Sino                                // Mes posterior //
+                yaCelebro = Verdadero           // Ya celebró // 
             Fin Si
-        Sino                                // Mes posterior //
-            yaCelebro = Verdadero           // Ya celebró // 
-        Fin Si
 
-        // SALIDA DE RESULTADOS
-        Escribir "Edad actual: ", edad      // Muestra edad calculada //
-        
-        Si yaCelebro Entonces               // Evaluación final // 
-            Escribir "Ya ha celebrado su cumpleaños este año."
-        Sino
-            Escribir "Aún no ha celebrado su cumpleaños este año."
-        Fin Si
-    Fin
+            // SALIDA DE RESULTADOS
+            Escribir "Edad actual: ", edad      // Muestra edad calculada //
+            
+            Si yaCelebro Entonces               // Evaluación final // 
+                Escribir "Ya ha celebrado su cumpleaños este año."
+            Sino
+                Escribir "Aún no ha celebrado su cumpleaños este año."
+            Fin Si
+        Fin
 
 
 5. Realice un algoritmo que permita determinar el sueldo semanal de un trabajador con base en las horas trabajadas y el pago por hora, considerando que a partir de la hora número 41 y hasta la 45, cada hora se le paga el doble, de la hora 46 a la 50, el triple, y que trabajar
@@ -307,10 +307,10 @@ más de 50 horas no está permitido. Represente el algoritmo mediante pseudocód
             Escribir "Ingrese el pago por hora:"
             Leer pagoPorHora      // Almacena el valor de la tarifa por hora //
 
-            // INICIALIZACIÓN // 
+            // Valor inicial de la variable// 
             sueldoSemanal = 0     // Variable para acumular el cálculo //
 
-            // LÓGICA DE CÁLCULO // 
+            // Calculo de las horas // 
             Si horasTrabajadas <= 40 Entonces
                 // Caso 1: Horas normales (sin extras)
                 sueldoSemanal = horasTrabajadas * pagoPorHora
@@ -330,7 +330,7 @@ más de 50 horas no está permitido. Represente el algoritmo mediante pseudocód
                 Fin Si
             Fin Si
 
-            // SALIDA DE RESULTADOS
+            // SALIDA DE DATOS //
             Si sueldoSemanal > 0 Entonces
                 Escribir "El sueldo semanal es:", sueldoSemanal
             Fin Si
@@ -375,7 +375,7 @@ más de 50 horas no está permitido. Represente el algoritmo mediante pseudocód
 
 **5. Salida de resultados para mostrar al usuario:**
 
-* **Objetivo:** Mostrar al usuario los resultados del conteo de cada categoría de números.
+
 * **Metodología:** Una vez que el bucle `Para` ha finalizado (es decir, se han evaluado las `N` cantidades), se utilizan varias instrucciones `Escribir` para mostrar los resultados:
     * Se imprime un encabezado "---- Resultados Finales ----" para organizar la salida.
     * Se muestra la cantidad de números iguales a cero, utilizando el valor almacenado en `contadorCero`.
@@ -384,39 +384,39 @@ más de 50 horas no está permitido. Represente el algoritmo mediante pseudocód
 
 
 
-        Inicio
-            // INICIALIZACIÓN DE CONTADORES // 
-            contadorCero = 0         // Almacena la cantidad de ceros //
-            contadorMenorCero = 0    // Almacena la cantidad de negativos // 
-            contadorMayorCero = 0    // Almacena la cantidad de positivos // 
+            Inicio
+                // INICIALIZACIÓN DE CONTADORES // 
+                contadorCero = 0         // Almacena la cantidad de ceros //
+                contadorMenorCero = 0    // Almacena la cantidad de negativos // 
+                contadorMayorCero = 0    // Almacena la cantidad de positivos // 
 
-            // ENTRADA DE DATOS // 
-            Escribir "Ingrese el número de cantidades a evaluar (N):"
-            Leer N                   // Captura el total de números a procesar // 
+                // ENTRADA DE DATOS // 
+                Escribir "Ingrese el número de cantidades a evaluar (N):"
+                Leer N                   // Captura el total de números a procesar // 
 
-            // PROCESAMIENTO CON BUCLE // 
-            Para i = 1 Hasta N Hacer // Itera N veces
-                Escribir "Ingrese la cantidad ", i, ":"
-                Leer cantidad        // Guarda cada número // 
+                // PROCESAMIENTO CON BUCLE // 
+                Para i = 1 Hasta N Hacer // Itera N veces
+                    Escribir "Ingrese la cantidad ", i, ":"
+                    Leer cantidad        // Guarda cada número // 
 
-                // ESTRUCTURA DE CLASIFICACIÓN
-                Si cantidad == 0 Entonces
-                    contadorCero = contadorCero + 1  // Caso cero // 
-                Sino
-                    Si cantidad < 0 Entonces
-                        contadorMenorCero = contadorMenorCero + 1  // Caso negativo // 
+                    // ESTRUCTURA DE CLASIFICACIÓN
+                    Si cantidad == 0 Entonces
+                        contadorCero = contadorCero + 1  // Caso cero // 
                     Sino
-                        contadorMayorCero = contadorMayorCero + 1  // Caso positivo // 
+                        Si cantidad < 0 Entonces
+                            contadorMenorCero = contadorMenorCero + 1  // Caso negativo // 
+                        Sino
+                            contadorMayorCero = contadorMayorCero + 1  // Caso positivo // 
+                        Fin Si
                     Fin Si
-                Fin Si
-            Fin Para
+                Fin Para
 
-            // SALIDA DE RESULTADOS // 
-            Escribir "---- Resultados Finales ----"
-            Escribir "Cantidades iguales a cero:", contadorCero
-            Escribir "Cantidades menores a cero:", contadorMenorCero
-            Escribir "Cantidades mayores a cero:", contadorMayorCero
-        Fin
+                // SALIDA DE RESULTADOS // 
+                Escribir "---- Resultados Finales ----"
+                Escribir "Cantidades iguales a cero:", contadorCero
+                Escribir "Cantidades menores a cero:", contadorMenorCero
+                Escribir "Cantidades mayores a cero:", contadorMayorCero
+            Fin
 
 7. Se requiere un algoritmo para determinar cuánto ahorrará en pesos una persona diariamente, y en un año, si ahorra 3¢ el primero de enero, 9¢ el dos de enero, 27¢ el 3 de enero y así sucesivamente todo el año. Represente la solución mediante pseudocódigo.
 
@@ -464,7 +464,7 @@ más de 50 horas no está permitido. Represente el algoritmo mediante pseudocód
             ahorroDiario = ahorroDiario * 3  // Regla de triplicación
         Fin Para
 
-        // RESULTADO FINAL
+        // RESULTADO FINAL PARA MOSTRAR AL USUARIO // 
         Escribir "➤ Ahorro total anual: $", ahorroTotal
     Fin
 
@@ -488,7 +488,7 @@ más de 50 horas no está permitido. Represente el algoritmo mediante pseudocód
 
 **3. Procesamiento por Artículo (Bucle):**
 
-* **Objetivo:** Iterar a través de cada artículo para obtener su precio, calcular el descuento aplicable y actualizar el total a pagar.
+
 * **Metodología:** Se utiliza una estructura de control de bucle `Para` que se ejecutará desde `i = 1` hasta `N` (inclusive). En cada iteración, que representa el procesamiento de un artículo:
     * **Captura de Datos:**
         * Se utiliza la instrucción `Escribir` para solicitar al usuario que ingrese el precio del artículo actual (indicando el número del artículo `i`).
@@ -503,7 +503,7 @@ más de 50 horas no está permitido. Represente el algoritmo mediante pseudocód
 
 **4. Resultado Final:**
 
-* **Objetivo:** Mostrar el monto total a pagar por todos los artículos después de aplicar los descuentos correspondientes.
+
 * **Metodología:** Una vez que el bucle `Para` ha completado sus `N` iteraciones (es decir, se han procesado todos los artículos), se utilizan instrucciones `Escribir` para mostrar el resultado final:
     * Se imprime una línea de separación (`=================================`) para destacar el resultado final.
     * Se muestra el mensaje "TOTAL A PAGAR: $" seguido del valor acumulado en la variable `totalPagar`.
@@ -542,7 +542,7 @@ más de 50 horas no está permitido. Represente el algoritmo mediante pseudocód
                 Escribir "Descuento aplicado: $", descuento
                 Escribir "Precio con descuento: $", costoConDescuento
 
-                // ACUMULACIÓN DEL TOTAL
+                // ACUMULACIÓN DEL TOTAL // 
                 totalPagar = totalPagar + costoConDescuento
             Fin Para
 
