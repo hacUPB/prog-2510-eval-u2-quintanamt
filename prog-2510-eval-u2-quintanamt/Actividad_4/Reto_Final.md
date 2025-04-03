@@ -16,5 +16,4 @@ Señala la relevancia de entender y usar correctamente int() y float().
 Resalta la importancia de organizar el código en funciones para reutilización y claridad.
 #### Buenas prácticas:
 Subraya la necesidad de comentar el código y usar nombres de variables descriptivos.
-#### Práctica:
 Enfatiza la importancia de realizar ejercicios de traducción y practicar la depuración.
