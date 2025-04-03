@@ -319,42 +319,42 @@ Este pseudocódigo tiene como objetivo calcular el sueldo semanal de un empleado
 
 
 
-    Inicio
-        // ENTRADA DE DATOS //
-        Escribir "Ingrese las horas trabajadas en la semana:"
-        Leer horasTrabajadas  // Almacena el total de horas trabajadas //
-        
-        Escribir "Ingrese el pago por hora:"
-        Leer pagoPorHora      // Almacena el valor de la tarifa por hora //
+        Inicio
+            // ENTRADA DE DATOS //
+            Escribir "Ingrese las horas trabajadas en la semana:"
+            Leer horasTrabajadas  // Almacena el total de horas trabajadas //
+            
+            Escribir "Ingrese el pago por hora:"
+            Leer pagoPorHora      // Almacena el valor de la tarifa por hora //
 
-        // INICIALIZACIÓN // 
-        sueldoSemanal = 0     // Variable para acumular el cálculo //
+            // INICIALIZACIÓN // 
+            sueldoSemanal = 0     // Variable para acumular el cálculo //
 
-        // LÓGICA DE CÁLCULO // 
-        Si horasTrabajadas <= 40 Entonces
-            // Caso 1: Horas normales (sin extras)
-            sueldoSemanal = horasTrabajadas * pagoPorHora
-        Sino
-            Si horasTrabajadas <= 45 Entonces
-                // Caso 2: Horas extras dobles (41-45)
-                sueldoSemanal = 40 * pagoPorHora + (horasTrabajadas - 40) * pagoPorHora * 2
+            // LÓGICA DE CÁLCULO // 
+            Si horasTrabajadas <= 40 Entonces
+                // Caso 1: Horas normales (sin extras)
+                sueldoSemanal = horasTrabajadas * pagoPorHora
             Sino
-                Si horasTrabajadas <= 50 Entonces
-                    // Caso 3: Horas extras triples (46-50)
-                    sueldoSemanal = 40 * pagoPorHora + 5 * pagoPorHora * 2 + (horasTrabajadas - 45) * pagoPorHora * 3
+                Si horasTrabajadas <= 45 Entonces
+                    // Caso 2: Horas extras dobles (41-45)
+                    sueldoSemanal = 40 * pagoPorHora + (horasTrabajadas - 40) * pagoPorHora * 2
                 Sino
-                    // Caso 4: Horas excedidas
-                    Escribir "No está permitido trabajar más de 50 horas."
-                    sueldoSemanal = 0  // Valor inválido
+                    Si horasTrabajadas <= 50 Entonces
+                        // Caso 3: Horas extras triples (46-50)
+                        sueldoSemanal = 40 * pagoPorHora + 5 * pagoPorHora * 2 + (horasTrabajadas - 45) * pagoPorHora * 3
+                    Sino
+                        // Caso 4: Horas excedidas
+                        Escribir "No está permitido trabajar más de 50 horas."
+                        sueldoSemanal = 0  // Valor inválido
+                    Fin Si
                 Fin Si
             Fin Si
-        Fin Si
 
-        // SALIDA DE RESULTADOS
-        Si sueldoSemanal > 0 Entonces
-            Escribir "El sueldo semanal es:", sueldoSemanal
-        Fin Si
-    Fin
+            // SALIDA DE RESULTADOS
+            Si sueldoSemanal > 0 Entonces
+                Escribir "El sueldo semanal es:", sueldoSemanal
+            Fin Si
+        Fin
 
         
 6. Se requiere un algoritmo para determinar, de N cantidades, cuántas son cero, cuántas son menores a cero, y cuántas son mayores a cero. Realice el pseudocódigo para representarlo, utilizando el ciclo apropiado.
@@ -417,39 +417,39 @@ Este pseudocódigo tiene como objetivo leer una cantidad específica de números
 
 
 
-    Inicio
-        // INICIALIZACIÓN DE CONTADORES // 
-        contadorCero = 0         // Almacena la cantidad de ceros //
-        contadorMenorCero = 0    // Almacena la cantidad de negativos // 
-        contadorMayorCero = 0    // Almacena la cantidad de positivos // 
+        Inicio
+            // INICIALIZACIÓN DE CONTADORES // 
+            contadorCero = 0         // Almacena la cantidad de ceros //
+            contadorMenorCero = 0    // Almacena la cantidad de negativos // 
+            contadorMayorCero = 0    // Almacena la cantidad de positivos // 
 
-        // ENTRADA DE DATOS // 
-        Escribir "Ingrese el número de cantidades a evaluar (N):"
-        Leer N                   // Captura el total de números a procesar // 
+            // ENTRADA DE DATOS // 
+            Escribir "Ingrese el número de cantidades a evaluar (N):"
+            Leer N                   // Captura el total de números a procesar // 
 
-        // PROCESAMIENTO CON BUCLE // 
-        Para i = 1 Hasta N Hacer // Itera N veces
-            Escribir "Ingrese la cantidad ", i, ":"
-            Leer cantidad        // Guarda cada número // 
+            // PROCESAMIENTO CON BUCLE // 
+            Para i = 1 Hasta N Hacer // Itera N veces
+                Escribir "Ingrese la cantidad ", i, ":"
+                Leer cantidad        // Guarda cada número // 
 
-            // ESTRUCTURA DE CLASIFICACIÓN
-            Si cantidad == 0 Entonces
-                contadorCero = contadorCero + 1  // Caso cero // 
-            Sino
-                Si cantidad < 0 Entonces
-                    contadorMenorCero = contadorMenorCero + 1  // Caso negativo // 
+                // ESTRUCTURA DE CLASIFICACIÓN
+                Si cantidad == 0 Entonces
+                    contadorCero = contadorCero + 1  // Caso cero // 
                 Sino
-                    contadorMayorCero = contadorMayorCero + 1  // Caso positivo // 
+                    Si cantidad < 0 Entonces
+                        contadorMenorCero = contadorMenorCero + 1  // Caso negativo // 
+                    Sino
+                        contadorMayorCero = contadorMayorCero + 1  // Caso positivo // 
+                    Fin Si
                 Fin Si
-            Fin Si
-        Fin Para
+            Fin Para
 
-        // SALIDA DE RESULTADOS // 
-        Escribir "---- Resultados Finales ----"
-        Escribir "Cantidades iguales a cero:", contadorCero
-        Escribir "Cantidades menores a cero:", contadorMenorCero
-        Escribir "Cantidades mayores a cero:", contadorMayorCero
-    Fin
+            // SALIDA DE RESULTADOS // 
+            Escribir "---- Resultados Finales ----"
+            Escribir "Cantidades iguales a cero:", contadorCero
+            Escribir "Cantidades menores a cero:", contadorMenorCero
+            Escribir "Cantidades mayores a cero:", contadorMayorCero
+        Fin
 
 7. Se requiere un algoritmo para determinar cuánto ahorrará en pesos una persona diariamente, y en un año, si ahorra 3¢ el primero de enero, 9¢ el dos de enero, 27¢ el 3 de enero y así sucesivamente todo el año. Represente la solución mediante pseudocódigo.
 
@@ -490,27 +490,27 @@ Este pseudocódigo simula un plan de ahorro anual donde la cantidad ahorrada dia
 
 
 
-Inicio
-    // DECLARACIÓN DE VARIABLES
-    ahorroDiario = 0.03      // 3 centavos iniciales (día 1)
-    ahorroTotal = 0.0        // Acumulador total
-    diasEnAnio = 365         // Constante de días anuales
+    Inicio
+        // DECLARACIÓN DE VARIABLES
+        ahorroDiario = 0.03      // 3 centavos iniciales (día 1)
+        ahorroTotal = 0.0        // Acumulador total
+        diasEnAnio = 365         // Constante de días anuales
 
-    // BUCLE PRINCIPAL (365 iteraciones)
-    Para dia = 1 Hasta diasEnAnio Hacer
-        // MOSTRAR PROGRESO DIARIO
-        Escribir "Día ", dia, ": Ahorro = $", ahorroDiario
-        
-        // ACUMULAR AL TOTAL
-        ahorroTotal = ahorroTotal + ahorroDiario  // Suma compuesta
-        
-        // ACTUALIZAR AHORRO PARA MAÑANA
-        ahorroDiario = ahorroDiario * 3  // Regla de triplicación
-    Fin Para
+        // BUCLE PRINCIPAL (365 iteraciones)
+        Para dia = 1 Hasta diasEnAnio Hacer
+            // MOSTRAR PROGRESO DIARIO
+            Escribir "Día ", dia, ": Ahorro = $", ahorroDiario
+            
+            // ACUMULAR AL TOTAL
+            ahorroTotal = ahorroTotal + ahorroDiario  // Suma compuesta
+            
+            // ACTUALIZAR AHORRO PARA MAÑANA
+            ahorroDiario = ahorroDiario * 3  // Regla de triplicación
+        Fin Para
 
-    // RESULTADO FINAL
-    Escribir "➤ Ahorro total anual: $", ahorroTotal
-Fin
+        // RESULTADO FINAL
+        Escribir "➤ Ahorro total anual: $", ahorroTotal
+    Fin
 
 
 8. Realice el algoritmo para determinar cuánto pagará una persona que adquiere N artículos, los cuales están de promoción. Considere que si su precio es mayor o igual a $200 se le aplica un descuento de 15%, y si su precio es mayor a $100, pero menor a $200, el descuento es de
