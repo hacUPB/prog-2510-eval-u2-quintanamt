@@ -173,28 +173,25 @@ Recuerde que por Pitágoras se tiene que: $C^2 = A^2 + B^2$.
 
 4. Se requiere determinar la edad actual de una persona basándose en su fecha de nacimiento. Además, es necesario establecer si la persona ya ha cumplido años en el año en curso, si aún no lo ha hecho, o si hoy es su cumpleaños, para celebrarlo. La fecha de nacimiento y la fecha actual estarán representadas mediante tres variables: día, mes y año.
 
-## Análisis y Metodología de Solución del Pseudocódigo para Calcular la Edad
 
-Este pseudocódigo tiene como objetivo calcular la edad de una persona a partir de su fecha de nacimiento y la fecha actual, además de determinar si ya ha celebrado su cumpleaños en el año en curso. A continuación, se presenta un análisis detallado de su estructura y la metodología utilizada:
 
-**1. Declaración de Variables:**
+**1. Que variables voy a utilizar:**
 
-* **Objetivo:** Definir los espacios en memoria necesarios para almacenar los datos relevantes.
+
 * **Metodología:** Se declaran variables de tipo entero (`Entero`) para almacenar el día, mes y año de nacimiento (`dia_nac`, `mes_nac`, `anio_nac`) y la fecha actual (`dia_actual`, `mes_actual`, `anio_actual`). También se declara una variable entera llamada `edad` para guardar el resultado del cálculo de la edad y una variable booleana (`Booleano`) llamada `yaCelebro` para indicar si el cumpleaños ya ha ocurrido este año.
 
 **2. Entrada de Datos:**
 
-* **Objetivo:** Obtener del usuario la fecha de nacimiento y la fecha actual.
+
 * **Metodología:** Se utilizan instrucciones de escritura (`Escribir`) para mostrar mensajes al usuario solicitando el día, mes y año de nacimiento, así como el día, mes y año actual. Posteriormente, se utilizan instrucciones de lectura (`Leer`) para almacenar los valores ingresados por el usuario en las variables correspondientes. Se incluyen mensajes indicando los rangos esperados para el día (1-31) y el mes (1-12).
 
 **3. Cálculo Inicial de la Edad:**
 
-* **Objetivo:** Realizar una primera aproximación del cálculo de la edad.
+
 * **Metodología:** Se resta el año de nacimiento (`anio_nac`) del año actual (`anio_actual`) y el resultado se asigna a la variable `edad`. Esta operación proporciona la diferencia de años, pero no considera aún el mes y el día de nacimiento.
 
 **4. Ajuste por Cumpleaños:**
 
-* **Objetivo:** Refinar el cálculo de la edad y determinar si el cumpleaños ya ha sido celebrado en el año actual.
 * **Metodología:** Se utiliza una estructura condicional anidada (`Si-Entonces-Sino Si-Entonces-Sino-Fin Si`) para comparar el mes y el día actual con el mes y el día de nacimiento:
     * **Si el mes actual es menor que el mes de nacimiento:** Significa que el cumpleaños aún no ha ocurrido este año. Se decrementa la `edad` en 1 y se asigna `Falso` a la variable `yaCelebro`.
     * **Sino Si el mes actual es igual al mes de nacimiento:** Se verifica el día:
@@ -205,20 +202,13 @@ Este pseudocódigo tiene como objetivo calcular la edad de una persona a partir 
 
 **5. Salida de Resultados:**
 
-* **Objetivo:** Mostrar al usuario la edad calculada y si ya celebró su cumpleaños este año.
+
 * **Metodología:** Se utiliza una instrucción de escritura (`Escribir`) para mostrar el valor de la variable `edad`. Posteriormente, se utiliza una estructura condicional (`Si-Entonces-Sino-Fin Si`) para verificar el valor de la variable `yaCelebro`:
     * **Si `yaCelebro` es `Verdadero`:** Se muestra un mensaje indicando que ya ha celebrado su cumpleaños este año.
     * **Sino (`yaCelebro` es `Falso`):** Se muestra un mensaje indicando que aún no ha celebrado su cumpleaños este año.
 
-**En resumen, la metodología de solución se basa en los siguientes pasos:**
 
-1.  **Obtención de la información necesaria** (fecha de nacimiento y fecha actual) mediante la interacción con el usuario.
-2.  **Realización de un cálculo inicial** de la edad restando los años.
-3.  **Ajuste preciso de la edad** considerando el mes y el día de nacimiento en relación con la fecha actual.
-4.  **Determinación del estado de la celebración del cumpleaños** en el año actual.
-5.  **Presentación clara de los resultados** al usuario.
 
-El pseudocódigo utiliza estructuras de control condicionales de manera efectiva para manejar las diferentes posibilidades en la comparación de las fechas y asegurar un cálculo preciso de la edad.
 
     Inicio
         // DECLARACIÓN DE VARIABLES //
@@ -278,44 +268,34 @@ El pseudocódigo utiliza estructuras de control condicionales de manera efectiva
 5. Realice un algoritmo que permita determinar el sueldo semanal de un trabajador con base en las horas trabajadas y el pago por hora, considerando que a partir de la hora número 41 y hasta la 45, cada hora se le paga el doble, de la hora 46 a la 50, el triple, y que trabajar
 más de 50 horas no está permitido. Represente el algoritmo mediante pseudocódigo.
 
-## Análisis y Metodología de Solución del Pseudocódigo para Calcular Sueldo Semanal
 
-Este pseudocódigo tiene como objetivo calcular el sueldo semanal de un empleado basándose en las horas trabajadas y el pago por hora, considerando diferentes tarifas para las horas extras. A continuación, se detalla su estructura y la metodología utilizada:
 
-**1. Entrada de Datos:**
+**1. Los datos de entrada que se le pide al usuario:**
 
-* **Objetivo:** Recopilar la información necesaria para el cálculo: las horas trabajadas en la semana y el pago por cada hora.
+
 * **Metodología:**
     * Se utiliza la instrucción `Escribir` para mostrar mensajes al usuario solicitando que ingrese la cantidad de horas trabajadas durante la semana.
     * La instrucción `Leer horasTrabajadas` captura el valor ingresado por el usuario y lo almacena en la variable `horasTrabajadas`.
     * De manera similar, se solicita al usuario que ingrese el pago por hora, y este valor se almacena en la variable `pagoPorHora`.
 
-**2. Inicialización:**
+**2. Valor para empezar:**
 
-* **Objetivo:** Establecer un valor inicial para la variable que acumulará el sueldo semanal.
 * **Metodología:** Se declara e inicializa la variable `sueldoSemanal` con el valor de 0. Esto asegura que cualquier cálculo posterior se realice a partir de un valor base conocido.
 
 **3. Lógica de Cálculo:**
 
-* **Objetivo:** Determinar el sueldo semanal aplicando diferentes tarifas según la cantidad de horas trabajadas.
+
 * **Metodología:** Se utiliza una estructura condicional anidada (`Si-Entonces-Sino Si-Entonces-Sino Si-Entonces-Sino-Fin Si`) para evaluar la cantidad de `horasTrabajadas` y aplicar la lógica de cálculo correspondiente:
     * **Si `horasTrabajadas` es menor o igual a 40:** Se considera que todas las horas son normales. El `sueldoSemanal` se calcula multiplicando `horasTrabajadas` por `pagoPorHora`.
     * **Sino Si `horasTrabajadas` es menor o igual a 45:** Se asume que se trabajaron 40 horas normales y las horas restantes (hasta 45) son horas extras dobles. El `sueldoSemanal` se calcula sumando el pago de las 40 horas normales (`40 * pagoPorHora`) y el pago de las horas extras dobles `((horasTrabajadas - 40) * pagoPorHora * 2)`.
     * **Sino Si `horasTrabajadas` es menor o igual a 50:** Se considera que hay 40 horas normales, 5 horas extras dobles (de 41 a 45), y las horas restantes (hasta 50) son horas extras triples. El `sueldoSemanal` se calcula sumando el pago de las 40 horas normales (`40 * pagoPorHora`), el pago de las 5 horas extras dobles (`5 * pagoPorHora * 2`), y el pago de las horas extras triples `((horasTrabajadas - 45) * pagoPorHora * 3)`.
     * **Sino (si `horasTrabajadas` es mayor que 50):** Se considera que se ha excedido el límite de horas de trabajo permitido. Se muestra un mensaje de advertencia al usuario y se asigna el valor de 0 a `sueldoSemanal` para indicar un resultado inválido.
 
-**4. Salida de Resultados:**
+**4. Salida que se le muestra al usuario:**
 
-* **Objetivo:** Mostrar el sueldo semanal calculado al usuario, siempre y cuando el cálculo haya sido válido.
+
 * **Metodología:** Se utiliza una estructura condicional (`Si-Entonces-Fin Si`) para verificar si el valor de `sueldoSemanal` es mayor que 0. Si lo es (lo que indica que no se excedió el límite de horas), se utiliza la instrucción `Escribir` para mostrar el mensaje "El sueldo semanal es:" seguido del valor calculado de `sueldoSemanal`. Si `sueldoSemanal` no es mayor que 0 (debido al exceso de horas), no se muestra ningún sueldo.
 
-**En resumen, la metodología de solución se basa en:**
-
-1.  **Adquisición de los datos de entrada** necesarios para el cálculo.
-2.  **Inicialización** de la variable que almacenará el resultado.
-3.  **Implementación de una lógica condicional anidada** para aplicar diferentes fórmulas de cálculo del sueldo según los rangos de horas trabajadas, incluyendo tarifas diferenciadas para horas extras dobles y triples.
-4.  **Validación implícita** al establecer un límite máximo de horas trabajadas.
-5.  **Presentación del resultado** al usuario solo si el cálculo es válido.
 
 
 
@@ -359,13 +339,10 @@ Este pseudocódigo tiene como objetivo calcular el sueldo semanal de un empleado
         
 6. Se requiere un algoritmo para determinar, de N cantidades, cuántas son cero, cuántas son menores a cero, y cuántas son mayores a cero. Realice el pseudocódigo para representarlo, utilizando el ciclo apropiado.
 
-## Análisis y Metodología de Solución del Pseudocódigo para Contar Números
 
-Este pseudocódigo tiene como objetivo leer una cantidad específica de números ingresados por el usuario y contar cuántos de ellos son iguales a cero, menores que cero (negativos) y mayores que cero (positivos). A continuación, se detalla su estructura y la metodología utilizada:
 
-**1. Inicialización de Contadores:**
+**1. Declaración de Variables:**
 
-* **Objetivo:** Preparar variables para llevar la cuenta de cada categoría de números.
 * **Metodología:** Se declaran e inicializan tres variables de tipo entero:
     * `contadorCero`: Se inicializa en 0 y se utilizará para almacenar la cantidad de números iguales a cero.
     * `contadorMenorCero`: Se inicializa en 0 y se utilizará para almacenar la cantidad de números menores que cero (negativos).
@@ -374,7 +351,7 @@ Este pseudocódigo tiene como objetivo leer una cantidad específica de números
 
 **2. Entrada de Datos (Cantidad de Números):**
 
-* **Objetivo:** Obtener del usuario la cantidad total de números que se van a evaluar.
+
 * **Metodología:**
     * Se utiliza la instrucción `Escribir` para mostrar un mensaje al usuario solicitando que ingrese el número de cantidades a evaluar, representado por la variable `N`.
     * La instrucción `Leer N` captura el valor ingresado por el usuario y lo almacena en la variable entera `N`. Este valor determinará cuántas veces se repetirá el proceso de lectura y clasificación de números.
@@ -388,7 +365,7 @@ Este pseudocódigo tiene como objetivo leer una cantidad específica de números
 
 **4. Estructura de Clasificación:**
 
-* **Objetivo:** Determinar si cada número ingresado es cero, negativo o positivo, y actualizar el contador correspondiente.
+
 * **Metodología:** Dentro del bucle `Para`, se utiliza una estructura condicional anidada (`Si-Entonces-Sino Si-Entonces-Sino-Fin Si`) para clasificar cada valor de la variable `cantidad`:
     * **Si `cantidad` es igual a 0:** Se incrementa el `contadorCero` en 1 (`contadorCero = contadorCero + 1`).
     * **Sino (si `cantidad` no es igual a 0):** Se evalúa si es negativo:
@@ -396,7 +373,7 @@ Este pseudocódigo tiene como objetivo leer una cantidad específica de números
         * **Sino (si `cantidad` no es cero y no es menor que cero):** Se deduce que es mayor que cero (positivo), por lo que se incrementa el `contadorMayorCero` en 1 (`contadorMayorCero = contadorMayorCero + 1`).
     Esta estructura asegura que cada número ingresado se clasifique en una y solo una de las tres categorías.
 
-**5. Salida de Resultados:**
+**5. Salida de resultados para mostrar al usuario:**
 
 * **Objetivo:** Mostrar al usuario los resultados del conteo de cada categoría de números.
 * **Metodología:** Una vez que el bucle `Para` ha finalizado (es decir, se han evaluado las `N` cantidades), se utilizan varias instrucciones `Escribir` para mostrar los resultados:
@@ -404,16 +381,6 @@ Este pseudocódigo tiene como objetivo leer una cantidad específica de números
     * Se muestra la cantidad de números iguales a cero, utilizando el valor almacenado en `contadorCero`.
     * Se muestra la cantidad de números menores a cero (negativos), utilizando el valor almacenado en `contadorMenorCero`.
     * Se muestra la cantidad de números mayores a cero (positivos), utilizando el valor almacenado en `contadorMayorCero`.
-
-**En resumen, la metodología de solución se basa en los siguientes pasos:**
-
-1.  **Inicializar contadores** para cada categoría de números.
-2.  **Solicitar al usuario la cantidad total de números** a evaluar.
-3.  **Utilizar un bucle para iterar** esa cantidad de veces.
-4.  **En cada iteración, leer un número** ingresado por el usuario.
-5.  **Clasificar el número** utilizando una estructura condicional para determinar si es cero, negativo o positivo.
-6.  **Incrementar el contador correspondiente** según la clasificación del número.
-7.  **Finalmente, mostrar los valores de los tres contadores** para informar al usuario sobre la cantidad de números en cada categoría.
 
 
 
@@ -453,13 +420,11 @@ Este pseudocódigo tiene como objetivo leer una cantidad específica de números
 
 7. Se requiere un algoritmo para determinar cuánto ahorrará en pesos una persona diariamente, y en un año, si ahorra 3¢ el primero de enero, 9¢ el dos de enero, 27¢ el 3 de enero y así sucesivamente todo el año. Represente la solución mediante pseudocódigo.
 
-## Análisis y Metodología de Solución del Pseudocódigo de Ahorro Anual Triplicado
 
-Este pseudocódigo simula un plan de ahorro anual donde la cantidad ahorrada diariamente se triplica cada día, comenzando con un ahorro inicial de 3 centavos. El objetivo es calcular el ahorro total acumulado al final de 365 días. A continuación, se detalla su estructura y la metodología utilizada:
 
 **1. Declaración de Variables:**
 
-* **Objetivo:** Definir y establecer los valores iniciales de las variables necesarias para el cálculo.
+
 * **Metodología:**
     * `ahorroDiario`: Se declara e inicializa con un valor de `0.03`. Esta variable representa la cantidad de dinero ahorrada en el día actual. El uso de un número decimal (`0.03`) es importante para representar correctamente las cantidades en centavos.
     * `ahorroTotal`: Se declara e inicializa con un valor de `0.0`. Esta variable actuará como un acumulador, guardando la suma total de los ahorros diarios a lo largo del año.
@@ -467,26 +432,17 @@ Este pseudocódigo simula un plan de ahorro anual donde la cantidad ahorrada dia
 
 **2. Bucle Principal (Simulación Diaria):**
 
-* **Objetivo:** Iterar a través de cada día del año para simular el proceso de ahorro y su crecimiento.
 * **Metodología:** Se utiliza una estructura de control de bucle `Para` que se ejecutará desde `dia = 1` hasta `diasEnAnio` (365 iteraciones). En cada iteración, que representa un día del año:
     * **Mostrar Progreso Diario:** Se utiliza la instrucción `Escribir` para mostrar el número del día actual (`dia`) y la cantidad ahorrada en ese día (`ahorroDiario`). Esto permite visualizar cómo el ahorro diario va aumentando.
     * **Acumular al Total:** El valor actual de `ahorroDiario` se suma al `ahorroTotal` (`ahorroTotal = ahorroTotal + ahorroDiario`). Esta línea acumula el ahorro del día actual al total ahorrado hasta ese momento.
     * **Actualizar Ahorro para Mañana:** El valor de `ahorroDiario` se multiplica por 3 (`ahorroDiario = ahorroDiario * 3`). Esta es la regla clave del plan de ahorro: la cantidad ahorrada para el día siguiente es el triple de la cantidad ahorrada en el día actual.
 
-**3. Resultado Final:**
+**3. Resultado Final mostrar el ahorro del año:**
 
-* **Objetivo:** Mostrar la cantidad total de dinero ahorrada al final del año.
+
 * **Metodología:** Una vez que el bucle `Para` ha completado sus 365 iteraciones (simulando el ahorro durante todo el año), se utiliza la instrucción `Escribir` para mostrar un mensaje indicando el ahorro total anual (`➤ Ahorro total anual: $`, `ahorroTotal`). El símbolo "➤" se utiliza aquí para destacar el resultado final.
 
-**En resumen, la metodología de solución se basa en los siguientes pasos:**
 
-1.  **Inicializar las variables** necesarias para el seguimiento del ahorro diario y total, así como la duración del período de ahorro.
-2.  **Implementar un bucle** que itere a través de cada día del año.
-3.  **Dentro del bucle:**
-    * **Mostrar el ahorro del día actual** para visualizar el progreso.
-    * **Acumular el ahorro diario al total**.
-    * **Aplicar la regla de crecimiento** (triplicar el ahorro diario) para el siguiente día.
-4.  **Después de completar el bucle**, mostrar el **ahorro total acumulado** durante todo el año.
 
 
 
@@ -516,18 +472,16 @@ Este pseudocódigo simula un plan de ahorro anual donde la cantidad ahorrada dia
 8. Realice el algoritmo para determinar cuánto pagará una persona que adquiere N artículos, los cuales están de promoción. Considere que si su precio es mayor o igual a $200 se le aplica un descuento de 15%, y si su precio es mayor a $100, pero menor a $200, el descuento es de
   12%; de lo contrario, solo se le aplica 10%. Se debe saber cuál es el costo y el descuento que tendrá cada uno de los artículos y finalmente cuánto se pagará por todos los artículos obtenidos. Represente la solución mediante pseudocódigo.
 
-## Análisis y Metodología de Solución del Pseudocódigo de Cálculo de Total a Pagar con Descuentos
 
-Este pseudocódigo simula el proceso de calcular el total a pagar por la compra de varios artículos. Para cada artículo, se aplica un descuento diferente basado en su precio original, y finalmente se suma el precio con descuento de todos los artículos para obtener el total a pagar. A continuación, se detalla su estructura y la metodología utilizada:
 
-**1. Inicialización:**
+**1. Variable de acumulación de costos:**
 
-* **Objetivo:** Preparar la variable que acumulará el costo total de todos los artículos.
+
 * **Metodología:** Se declara e inicializa la variable `totalPagar` con un valor de `0.0`. Esta variable de tipo decimal se utilizará para sumar el precio de cada artículo después de aplicar el descuento correspondiente.
 
 **2. Entrada Principal (Cantidad de Artículos):**
 
-* **Objetivo:** Obtener del usuario la cantidad total de artículos que se incluirán en la compra.
+.
 * **Metodología:**
     * Se utiliza la instrucción `Escribir` para mostrar un mensaje al usuario solicitando que ingrese el número de artículos.
     * La instrucción `Leer N` captura el valor ingresado por el usuario y lo almacena en la variable entera `N`. Este valor determinará cuántas veces se repetirá el proceso de lectura del precio, cálculo del descuento y acumulación al total.
@@ -554,17 +508,7 @@ Este pseudocódigo simula el proceso de calcular el total a pagar por la compra 
     * Se imprime una línea de separación (`=================================`) para destacar el resultado final.
     * Se muestra el mensaje "TOTAL A PAGAR: $" seguido del valor acumulado en la variable `totalPagar`.
 
-**En resumen, la metodología de solución se basa en los siguientes pasos:**
 
-1.  **Inicializar una variable** para almacenar el total a pagar.
-2.  **Solicitar al usuario la cantidad de artículos** que se van a comprar.
-3.  **Utilizar un bucle para procesar cada artículo:**
-    * **Leer el precio** del artículo.
-    * **Aplicar una lógica de descuentos escalonada** basada en el precio del artículo.
-    * **Calcular el precio del artículo con el descuento aplicado**.
-    * **Mostrar la información del artículo** (precio original, descuento, precio con descuento).
-    * **Acumular el precio con descuento** al total a pagar.
-4.  **Finalmente, mostrar el total a pagar** por todos los artículos.
 
         Inicio
             // INICIALIZACIÓN //
@@ -612,11 +556,11 @@ Este pseudocódigo simula el proceso de calcular el total a pagar por la compra 
     $𝑒^𝑥 = 1+\frac x {1!} + \frac {x^2}{2!}+ \frac {x^3}{3!}+ …$
 ## Análisis y Metodología de Solución del Pseudocódigo para Aproximar eˣ usando la Serie de Taylor
 
-Este pseudocódigo implementa un método iterativo para aproximar el valor de la función exponencial $e^x$ utilizando los primeros `precision` términos de su serie de Taylor. A continuación, se detalla su estructura y la metodología utilizada:
 
-**1. Entrada de Datos:**
 
-* **Objetivo:** Obtener del usuario el valor del exponente ($x$) y la precisión deseada, definida por el número de términos de la serie a utilizar.
+**1. Entrada de Datos valor que desea del exponente:**
+
+
 * **Metodología:**
     * Se utiliza la instrucción `Escribir` para solicitar al usuario que ingrese el valor de $x$.
     * La instrucción `Leer x` captura el valor ingresado por el usuario y lo almacena en la variable `x`.
@@ -625,7 +569,7 @@ Este pseudocódigo implementa un método iterativo para aproximar el valor de la
 
 **2. Inicialización:**
 
-* **Objetivo:** Establecer los valores iniciales de las variables necesarias para el cálculo de la serie de Taylor.
+
 * **Metodología:**
     * `resultado`: Se inicializa en `1.0`. Esto representa el primer término de la serie de Taylor para $e^x$, que es $\frac{x^0}{0!} = 1$.
     * `termino`: Se inicializa en `1.0`. Esta variable almacenará el valor del término actual de la serie que se está calculando en cada iteración. Inicialmente, corresponde al primer término.
@@ -641,18 +585,8 @@ Este pseudocódigo implementa un método iterativo para aproximar el valor de la
 
 **4. Resultado Final:**
 
-* **Objetivo:** Mostrar la aproximación calculada de $e^x$ junto con el valor de $x$ y la cantidad de términos utilizados para la aproximación.
+
 * **Metodología:** Una vez que el bucle `Para` ha completado sus iteraciones (se han sumado la cantidad de términos especificada por `precision`), se utiliza la instrucción `Escribir` para mostrar el resultado final. Se incluye el valor de $x$, la cantidad de términos utilizados (`precision`), y la aproximación calculada de $e^x$ almacenada en la variable `resultado`.
-
-**En resumen, la metodología de solución se basa en los siguientes pasos:**
-
-1.  **Obtener el valor del exponente ($x$) y la precisión** (número de términos) del usuario.
-2.  **Inicializar las variables** necesarias para el cálculo: el resultado acumulativo (comenzando con el primer término), el valor del término actual y el factorial.
-3.  **Iterar un número de veces igual a la precisión deseada:**
-    * **Calcular el factorial** del índice del término actual.
-    * **Calcular el valor del término actual** de la serie de Taylor.
-    * **Sumar el término actual al resultado acumulativo**.
-4.  **Mostrar el resultado final**, indicando la aproximación de $e^x$ obtenida con la precisión especificada.
 
 
 
@@ -688,32 +622,6 @@ Este pseudocódigo implementa un método iterativo para aproximar el valor de la
 
 $Sen x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + ...$
 
-## Análisis y Metodología de Solución del Pseudocódigo para Aproximar Seno(x) usando la Serie de Taylor
-
-Este pseudocódigo define una función llamada `calcularSeno` que toma como entrada un valor $x$ (en radianes) y una precisión (el número de términos a utilizar de la serie de Taylor) para aproximar el valor de $\sin(x)$. A continuación, se detalla su estructura y la metodología utilizada:
-
-**1. Inicialización:**
-
-* **Objetivo:** Establecer los valores iniciales de las variables necesarias para el cálculo de la serie de Taylor para $\sin(x)$.
-* **Metodología:**
-    * `seno`: Se inicializa con el valor de `x`. Este representa el primer término de la serie de Taylor para $\sin(x)$, que es $\frac{x^1}{1!} = x$.
-    * `termino`: Se inicializa con el valor de `x`. Esta variable almacenará el valor del término actual de la serie que se está calculando en cada iteración. Inicialmente, corresponde al primer término.
-    * `signo`: Se inicializa en `-1`. Esta variable se utiliza para alternar el signo de los términos sucesivos en la serie de Taylor de $\sin(x)$ (los términos impares tienen signo positivo y los términos de grado superior tienen signos alternantes). Comienza en -1 porque el segundo término (con $x^3$) es negativo.
-
-**2. Cálculo Iterativo (Serie de Taylor):**
-
-* **Objetivo:** Calcular y sumar/restar los siguientes términos de la serie de Taylor hasta alcanzar la precisión deseada.
-* **Metodología:** Se utiliza una estructura de control de bucle `Para` que se ejecutará desde `i = 1` hasta `precision` (inclusive). Cada iteración representa el cálculo y la inclusión de un nuevo término en la aproximación:
-    * `termino = termino * x * x / ((2 * i) * (2 * i + 1))`: Esta línea calcula el siguiente término de la serie de Taylor para $\sin(x)$ de forma iterativa. Observa cómo se actualiza `termino` utilizando el valor del término anterior. El término general de la serie es $(-1)^n \frac{x^{2n+1}}{(2n+1)!}$. Al pasar de un término $n$ al siguiente $n+1$, se multiplica por $-\frac{x^2}{(2n+2)(2n+3)}$. La fórmula en el pseudocódigo implementa esta relación de recurrencia, pero manejando el signo con la variable `signo`. Específicamente, para la iteración `i`, se está calculando esencialmente el término correspondiente a $x^{2i+1}$.
-    * `seno = seno + signo * termino`: El valor del término actual (`termino`), afectado por el `signo` correspondiente, se suma al `seno` acumulativo. Esto implementa la suma y resta alternante de los términos de la serie.
-    * `signo = -signo`: El valor de la variable `signo` se invierte para la siguiente iteración, asegurando la alternancia de signos entre los términos sucesivos de la serie.
-
-**3. Resultado Final:**
-
-* **Objetivo:** Devolver la aproximación calculada de $\sin(x)$.
-* **Metodología:** Una vez que el bucle `Para` ha completado sus iteraciones (se han sumado/restado la cantidad de términos especificada por `precision`), la función `Retornar seno` devuelve el valor acumulado en la variable `seno`, que representa la aproximación de $\sin(x)$.
-
-**En resumen, la metodología de solución se basa en los siguientes pasos:**
 
 1.  **Inicializar las variables** necesarias: la aproximación del seno (comenzando con el primer término), el valor del término actual y el signo para la alternancia.
 2.  **Iterar un número de veces igual a la precisión deseada:**
